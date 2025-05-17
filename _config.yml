@@ -1,0 +1,42 @@
+title: KMUpower
+description: Professionelle Lösungen für KMUs auf Basis der Microsoft Power Platform
+url: https://kmupower.ch
+baseurl: ""
+
+markdown: kramdown
+permalink: pretty
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+
+collections:
+  services:
+    output: true
+    permalink: /:path/
+  testimonials:
+    output: false
+
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+  - scope:
+      path: ""
+      type: "services"
+    values:
+      layout: "service"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .gitignore
+  - README.md
