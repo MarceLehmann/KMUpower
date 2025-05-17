@@ -1,14 +1,16 @@
-- title: Home
-  url: /
-- title: Über uns
-  url: /about
-- title: KMUpower Suite
-  url: /kmupower-suite
-- title: Preisübersicht
-  url: /pricing
-- title: AGB
-  url: /terms
-- title: Impressum
-  url: /imprint
-- title: Kontakt
-  url: /contact
+# Hauptnavigation
+main:
+  - title: "Home"
+    url: /
+  - title: "Über uns"
+    url: /about/
+  - title: "Dienstleistungen"
+    url: /services/
+  - title: "Blog"
+    url: /year-archive/
+  - title: "Kategorien"
+    url: /categories/
+  - title: "Tags"
+    url: /tags/
+  - title: "Kontakt"
+    url: /contact/

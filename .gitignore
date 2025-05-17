@@ -1,0 +1,27 @@
+# Jekyll-Dateien
+_site
+.sass-cache
+.jekyll-cache
+.jekyll-metadata
+vendor
+
+# Lokale Ruby-Abhängigkeiten
+.bundle/
+vendor/
+
+# System-Dateien
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Log-Dateien
+*.log
+*.swp
+*~
+
+# IDE-Dateien
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
