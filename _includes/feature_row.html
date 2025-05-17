@@ -1,0 +1,46 @@
+{% comment %}
+  Usage: 
+  {% include feature_row %}
+  *or*
+  {% include feature_row id="custom_id" type="center" %}
+
+  `id` is used to look for a specific feature_row array in your page's front matter (e.g. page.custom_id)
+  `type` can be "center" for centered content
+{% endcomment %}
+
+{% if include.id %}
+  {% assign feature_array = page[include.id] %}
+{% else %}
+  {% assign feature_array = page.feature_row %}
+{% endif %}
+
+{% if feature_array %}
+<div class="feature__wrapper">
+  {% for feature in feature_array %}
+    <div class="feature__item{% if include.type == "center" %} feature__item--center{% endif %}{% if feature.image_path == nil %} feature__item--no-image{% endif %}{% if feature.title == nil and feature.excerpt == nil %} feature__item--empty{% endif %}">
+      <div class="archive__item">
+        {% if feature.image_path %}
+          <div class="archive__item-teaser">
+            <img src="{{ feature.image_path | relative_url }}"
+                 alt="{% if feature.alt %}{{ feature.alt }}{% else %}{{ feature.title }}{% endif %}" />
+          </div>
+        {% endif %}
+
+        <div class="archive__item-body">
+          {% if feature.title %}
+            <h2 class="archive__item-title">{{ feature.title | markdownify | remove: "<p>" | remove: "</p>" }}</h2>
+          {% endif %}
+          {% if feature.excerpt %}
+            <div class="archive__item-excerpt">
+              {{ feature.excerpt | markdownify }}
+            </div>
+          {% endif %}
+          {% if feature.url and feature.btn_label %}
+            <p><a href="{{ feature.url | relative_url }}" class="btn {{ feature.btn_class }}">{{ feature.btn_label }}</a></p>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+{% endif %}
