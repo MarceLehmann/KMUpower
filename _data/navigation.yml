@@ -2,15 +2,19 @@
 main:
   - title: "Home"
     url: /
-  - title: "Über uns"
-    url: /about/
-  - title: "Dienstleistungen"
-    url: /services/
+  - title: "Suite"
+    url: /suite/
+  - title: "Leistungen"
+    url: /leistungen/
+  - title: "Preise"
+    url: /preise/
+  - title: "Case Studies"
+    url: /case-studies/
   - title: "Blog"
-    url: /year-archive/
-  - title: "Kategorien"
-    url: /categories/
-  - title: "Tags"
-    url: /tags/
+    url: /blog/
+  - title: "Über uns"
+    url: /ueber-uns/
   - title: "Kontakt"
-    url: /contact/
+    url: /kontakt/
+  - title: "Support"
+    url: /support/

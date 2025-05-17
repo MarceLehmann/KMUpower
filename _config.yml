@@ -11,8 +11,8 @@ baseurl: "/KMUpower" # der Unterpfad deiner Seite, z.B. "/blog"
 locale: "de-CH" # Spracheinstellung
 
 # Theme-Einstellungen
-theme: minimal-mistakes-jekyll
-remote_theme: mmistakes/minimal-mistakes@4.24.0
+remote_theme: "mmistakes/minimal-mistakes@4.24.0"
+# theme: minimal-mistakes-jekyll  # Muss auskommentiert oder entfernt sein!
 
 # Minimal Mistakes Skin
 minimal_mistakes_skin: "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
