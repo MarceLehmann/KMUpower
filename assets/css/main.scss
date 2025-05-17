@@ -1,48 +1,146 @@
 ---
-# This front matter is required for Jekyll to process the SCSS file.
-# It can be empty.
 ---
 
-// Import the Minimal Mistakes skin (as set in _config.yml)
-@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
-
-// Import Minimal Mistakes main styles
-@import "minimal-mistakes";
-
-/* Ihre benutzerdefinierten Stile beginnen hier */
-
-.page__content {
-  font-size: 1em;
+/* Inter Font Faces */
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/inter/Inter-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 
-.page__content p,
-.page__content li {
-  font-size: 0.9em;
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/inter/Inter-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
 }
 
-.page__title {
-  font-size: 2.5em;
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/inter/Inter-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
 }
 
-h1 {
-  color: #0066cc;
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/inter/Inter-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
 }
 
-h2 {
-  color: #0077cc;
+/* Global styles for the new Fluent UI theme can be added here if needed. */
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+  /* Fluent UI Design Token Overrides */
+  /* Ensure this is wrapped in :root or fluent-design-system-provider */
+  /* For now, let's assume it will be applied to fluent-design-system-provider */
 }
 
-a:hover {
-  text-decoration: underline;
+fluent-design-system-provider {
+  --neutral-foreground-rest: #003366; /* Dark for text */
+  --accent-fill-rest: #006BB6; /* Primary for interactive elements */
+  --accent-fill-hover: #005ea0; /* Darker shade for hover */
+  --accent-fill-active: #004f8a; /* Even darker for active */
+  
+  /* Additional tokens for the accent color if needed, e.g., for text on accent backgrounds */
+  --neutral-fill-input-rest: #ffffff; /* Example: ensure inputs are white */
+
+  /* Custom brand color variables - can be used by other custom CSS */
+  --brand-primary: #006BB6;
+  --brand-accent: #00C389;
+  --brand-dark: #003366;
 }
 
-.page__footer {
-  color: #fff;
-  background-color: #333;
+/* Basic Header Styling */
+.site-header {
+  background-color: var(--brand-dark); /* Using the custom var for dark background */
+  padding: 1rem;
+  color: #ffffff; /* White text on dark background */
 }
 
-@media (max-width: 768px) {
-  .page__title {
-    font-size: 1.8em;
-  }
+.site-header .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px; /* Or your preferred max-width */
+  margin: 0 auto;
+}
+
+.site-title {
+  font-weight: bold;
+  /* Fluent anchor will inherit color, but we can set it if needed */
+}
+
+.site-nav fluent-anchor, .site-nav fluent-button {
+  margin-left: 10px;
+  /* --neutral-foreground-rest is already set to dark, for header links on dark bg, this needs adjustment */
+  /* We might need to set specific tokens for components within the header if they don't adapt automatically */
+  --neutral-foreground-rest: #ffffff; /* Attempt to make anchor text white in header */
+}
+
+/* Basic Footer Styling */
+.site-footer {
+  background-color: #f0f0f0; /* Light grey background */
+  padding: 2rem 1rem;
+  text-align: center;
+  color: var(--brand-dark); /* Dark text on light background */
+}
+
+.site-footer .wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-nav fluent-anchor {
+  margin: 0 5px;
+}
+
+/* Card Layout Styling */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+fluent-card {
+  /* Default card styles are usually fine, but we can add more here */
+  /* For example, ensuring full width within the grid cell */
+  width: 100%;
+}
+
+.page-section {
+  padding: 20px;
+  margin-bottom: 20px;
+  /* background-color: var(--neutral-layer-2); /* Example of using a Fluent token for section background */
+}
+
+.page-section h2 {
+  /* color: var(--neutral-foreground-rest); */ /* Ensure headings use the primary text color */
+  margin-bottom: 15px;
+}
+
+/* Utility class for centering text if needed */
+.text-center {
+  text-align: center;
+}
+
+/* Styling for lists within cards or sections */
+.page-section ul,
+.page-section ol {
+  padding-left: 20px;
+  margin-top: 0;
+}
+
+.page-section li {
+  margin-bottom: 8px;
 }

@@ -1,41 +1,38 @@
-# Grundeinstellungen für eine Jekyll-Webseite mit Minimal Mistakes Theme
+# Grundeinstellungen für eine Jekyll-Webseite
 
 # Seitentitel und Beschreibung
 title: KMUpower
 subtitle: Lösungen für kleine und mittlere Unternehmen
 name: KMUpower GmbH
 description: Professionelle Dienstleistungen und Beratung für KMUs in der Schweiz
-email: info@kmupower.example.com
-url: "https://yourusername.github.io" # Die URL deiner Seite
+email: info@kmupower.example.com # Placeholder
+url: "https://yourusername.github.io" # Placeholder - Die URL deiner Seite
 baseurl: "/KMUpower" # der Unterpfad deiner Seite, z.B. "/blog"
 locale: "de-CH" # Spracheinstellung
 
 # Theme-Einstellungen
-remote_theme: "mmistakes/minimal-mistakes@4.24.0"
-# theme: minimal-mistakes-jekyll  # Muss auskommentiert oder entfernt sein!
-
-# Minimal Mistakes Skin
-minimal_mistakes_skin: "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+# remote_theme: "mmistakes/minimal-mistakes@4.24.0" # Removed
+# minimal_mistakes_skin: "default" # Removed
 
 # Suchfunktion
-search: true
+# search: true # Removed - search.js and lunr.js to be removed
 
-# Site Author
+# Site Author (Struktur wird ggf. für neues Theme angepasst)
 author:
-  name     : "Ihr Name"
-  avatar   : "/assets/images/bio-photo.jpg"
-  bio      : "Kurze Biographie über Sie oder Ihre Organisation."
-  location : "Standort"
+  name     : "Ihr Name" # Placeholder
+  avatar   : "/assets/images/bio-photo.jpg" # Placeholder
+  bio      : "Kurze Biographie über Sie oder Ihre Organisation." # Placeholder
+  location : "Standort" # Placeholder
   links:
     - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:your-email@example.com"
+      icon: "fas fa-fw fa-envelope-square" # Icons may not be available without Font Awesome
+      url: "mailto:your-email@example.com" # Placeholder
     - label: "Website"
       icon: "fas fa-fw fa-link"
-      url: "https://your-website.com"
+      url: "https://your-website.com" # Placeholder
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
-      url: "https://linkedin.com/in/yourprofile"
+      url: "https://linkedin.com/in/yourprofile" # Placeholder
 
 # Seiten-Navigation
 include:
@@ -63,29 +60,30 @@ defaults:
       path: ""
       type: posts
     values:
-      layout: single
-      author_profile: true
+      layout: default # Changed from single
+      # author_profile: false # Removed
       read_time: true
-      comments: true
-      share: true
+      comments: false # Assuming no comment system initially
+      share: false    # Assuming no share buttons initially
       related: true
   # _pages
   - scope:
       path: "_pages"
       type: pages
     values:
-      layout: single
-      author_profile: true
+      layout: default # Changed from single
+      # author_profile: false # Removed
 
-# Plugins
+# Plugins (jekyll-seo-tag is recommended in your checklist, consider adding if not already implicitly included by github-pages)
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
   - jekyll-include-cache
+  - jekyll-seo-tag # Ensure jekyll-seo-tag is listed here
 
-# Archives
+# Archives (These create pages, ensure layouts for these are also updated or they might break)
 category_archive:
   type: liquid
   path: /categories/
@@ -93,18 +91,18 @@ tag_archive:
   type: liquid
   path: /tags/
 
-# Footer-Links
+# Footer-Links (Struktur wird ggf. für neues Theme angepasst)
 footer:
   links:
     - label: "LinkedIn"
-      icon: "fab fa-fw fa-linkedin"
-      url: "https://linkedin.com/company/kmupower"
+      icon: "fab fa-fw fa-linkedin" # Icons may not be available
+      url: "https://linkedin.com/company/kmupower" # Placeholder
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/kmupower"
+      url: "https://twitter.com/kmupower" # Placeholder
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
-      url: "https://facebook.com/kmupower"
+      url: "https://facebook.com/kmupower" # Placeholder
     - label: "Impressum"
       icon: "fas fa-fw fa-info-circle"
       url: "/impressum/"

@@ -1,0 +1,14 @@
+<header class="site-header">
+  <div class="wrapper">
+    <fluent-anchor href="{{ '/' | relative_url }}" appearance="neutral" style="color: #ffffff; text-decoration: none;">
+      <h1 class="site-title" style="margin: 0; font-size: 1.5em;">{{ site.title | escape }}</h1>
+    </fluent-anchor>
+    <nav class="site-nav">
+      {% for item in site.data.navigation.main %}
+        <fluent-anchor href="{{ item.url | relative_url }}" appearance="neutral" style="color: #ffffff; margin-left: 15px;">{{ item.title }}</fluent-anchor>
+      {% endfor %}
+      <!-- Example of a button if needed -->
+      <!-- <fluent-button appearance="accent">Action</fluent-button> -->
+    </nav>
+  </div>
+</header>

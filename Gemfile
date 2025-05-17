@@ -6,5 +6,6 @@ gem "jekyll-paginate", group: :jekyll_plugins
 gem "jekyll-sitemap", group: :jekyll_plugins
 gem "jekyll-gist", group: :jekyll_plugins
 gem "jekyll-feed", group: :jekyll_plugins
+gem "jekyll-seo-tag", group: :jekyll_plugins # Added for comprehensive SEO features
 gem "webrick", "~> 1.7"
 # gem "minimal-mistakes-jekyll"

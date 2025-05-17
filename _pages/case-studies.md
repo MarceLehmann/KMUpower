@@ -1,18 +1,21 @@
 ---
 title: "Case Studies"
 permalink: /case-studies/
-layout: single
-header:
-  overlay_color: "#0066cc"
-  overlay_filter: "0.5"
-  overlay_image: /assets/images/case-studies-header.jpg
+layout: default
 excerpt: "Erfolgsgeschichten und Fallstudien aus der Praxis."
 ---
 
-## Case Studies – Erfolgsgeschichten aus der Praxis
+<div class="page-section">
+  <fluent-heading level="1">{{ page.title }}</fluent-heading>
+  <fluent-text style="display:block; margin-bottom: 15px;">{{ page.excerpt }}</fluent-text>
 
-Hier entsteht eine Sammlung von Fallstudien und Kundenprojekten, die den Mehrwert unserer Lösungen für KMUs zeigen.
+  <fluent-text style="display:block; margin-bottom: 10px;">
+    Hier entsteht eine Sammlung von Fallstudien und Kundenprojekten, die den Mehrwert unserer Lösungen für KMUs zeigen.
+  </fluent-text>
+  
+  <fluent-alert intent="info" style="margin-bottom: 20px;">
+    <fluent-text weight="bold">Demnächst verfügbar!</fluent-text>
+  </fluent-alert>
 
-**Demnächst verfügbar!**
-
-[Kontaktieren Sie uns für Referenzen](/kontakt/){: .btn .btn--primary .btn--large}
+  <fluent-button appearance="primary" href="{{ '/kontakt/' | relative_url }}">Kontaktieren Sie uns für Referenzen</fluent-button>
+</div>

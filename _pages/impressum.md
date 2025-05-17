@@ -1,29 +1,47 @@
 ---
 title: "Impressum"
 permalink: /impressum/
-layout: single
-header:
-  overlay_color: "#0066cc"
-  overlay_filter: "0.5"
-  overlay_image: /assets/images/impressum-header.jpg
+layout: default
 excerpt: "Rechtliche Angaben gemäß Schweizer Recht."
 ---
 
-## Impressum
+<div class="page-section">
+  <fluent-heading level="1">{{ page.title }}</fluent-heading>
+  <fluent-text style="display:block; margin-bottom: 20px;">{{ page.excerpt }}</fluent-text>
 
-KMUpower GmbH  
-Musterstraße 123  
-8000 Zürich  
-Schweiz
+  <fluent-heading level="2">Angaben gemäß § 5 TMG / Art. 3 UWG</fluent-heading>
+  <fluent-text style="display:block; margin-bottom: 10px;">
+    KMUpower GmbH<br>
+    Musterstraße 123<br>
+    8000 Zürich<br>
+    Schweiz
+  </fluent-text>
 
-Telefon: +41 XX XXX XX XX  
-E-Mail: info@kmupower.example.com
+  <fluent-heading level="3">Kontakt</fluent-heading>
+  <fluent-text style="display:block; margin-bottom: 10px;">
+    Telefon: +41 XX XXX XX XX<br>
+    E-Mail: <fluent-anchor href="mailto:info@kmupower.example.com">info@kmupower.example.com</fluent-anchor>
+  </fluent-text>
 
-Geschäftsführer: Marcel Lehmann
+  <fluent-heading level="3">Vertreten durch</fluent-heading>
+  <fluent-text style="display:block; margin-bottom: 10px;">
+    Geschäftsführer: Marcel Lehmann
+  </fluent-text>
 
-Handelsregister: Handelsregisteramt Zürich  
-Handelsregisternummer: CHE-XXX.XXX.XXX
+  <fluent-heading level="3">Registereintrag</fluent-heading>
+  <fluent-text style="display:block; margin-bottom: 10px;">
+    Handelsregister: Handelsregisteramt Zürich<br>
+    Handelsregisternummer: CHE-XXX.XXX.XXX
+  </fluent-text>
 
-Umsatzsteuer-ID: CHE-XXX.XXX.XXX MWST
+  <fluent-heading level="3">Umsatzsteuer-ID</fluent-heading>
+  <fluent-text style="display:block; margin-bottom: 10px;">
+    Umsatzsteuer-Identifikationsnummer gemäß Art. 28 Abs. 1 UStG / Art. 67 MWSTG: CHE-XXX.XXX.XXX MWST
+  </fluent-text>
 
-Verantwortlich für den Inhalt: Marcel Lehmann
+  <fluent-heading level="3">Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</fluent-heading>
+  <fluent-text style="display:block; margin-bottom: 10px;">
+    Marcel Lehmann<br>
+    (Anschrift wie oben)
+  </fluent-text>
+</div>

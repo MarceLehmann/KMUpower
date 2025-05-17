@@ -1,0 +1,31 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  {% seo %} <!-- Replaces manual title, description, canonical, Open Graph, Twitter Cards -->
+
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  <!-- The canonical link is now handled by {% seo %} -->
+  <!-- <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}"> -->
+
+  <!-- Preload Inter font files -->
+  <link rel="preload" href="{{ '/assets/fonts/inter/Inter-Regular.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="{{ '/assets/fonts/inter/Inter-SemiBold.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin="anonymous">
+  <!-- Add more preloads if other weights are critical for initial render (e.g., Bold for headings) -->
+  <link rel="preload" href="{{ '/assets/fonts/inter/Inter-Bold.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin="anonymous">
+
+  <!-- Favicon links will be added here later -->
+  <!-- Schema.org markup is largely handled by {% seo %}, but can be extended -->
+
+  <!-- Fluent UI Web Components Design Tokens (optional, for deeper customization) -->
+  <!-- <script type="module" src="https://cdn.jsdelivr.net/npm/@fluentui/web-components/dist/design-tokens.min.js"></script> -->
+
+  <!-- Preconnect and Preload (Checklist 1.4) -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="preload" href="{{ '/assets/css/main.css' | relative_url }}" as="style">
+  <!-- If using Google Fonts (Checklist 5.4), add preconnect for it -->
+  <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+  <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+
+</head>

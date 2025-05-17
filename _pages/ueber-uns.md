@@ -1,35 +1,44 @@
 ---
 title: "Über uns"
 permalink: /ueber-uns/
-layout: single
-header:
-  overlay_color: "#0066cc"
-  overlay_filter: "0.5"
-  overlay_image: /assets/images/ueber-uns-header.jpg
+layout: default
 excerpt: "Unsere Story, Werte, Timeline und das Netzwerk hinter KMUpower."
 ---
 
-## Unsere Story
+<fluent-card class="page-section">
+    <fluent-heading level="2">Unsere Story</fluent-heading>
+    <fluent-text>
+        KMUpower entstand 2023 als ThePowerAddicts und wurde 2025 gezielt auf die Bedürfnisse von KMUs im DACH-Raum ausgerichtet. Unsere Mission: <strong>Wir ermächtigen kleine und mittelständische Unternehmen durch digitale Exzellenz.</strong>
+    </fluent-text>
+</fluent-card>
 
-KMUpower entstand 2023 als ThePowerAddicts und wurde 2025 gezielt auf die Bedürfnisse von KMUs im DACH-Raum ausgerichtet. Unsere Mission: **Wir ermächtigen kleine und mittelständische Unternehmen durch digitale Exzellenz.**
+<fluent-card class="page-section">
+    <fluent-heading level="2">Unsere Werte</fluent-heading>
+    <ul>
+        <li><fluent-text><strong>Expertise mit Bodenständigkeit</strong></fluent-text></li>
+        <li><fluent-text><strong>Wertorientierung</strong></fluent-text></li>
+        <li><fluent-text><strong>Pragmatischer Fortschritt</strong></fluent-text></li>
+        <li><fluent-text><strong>Durchgängige Exzellenz</strong></fluent-text></li>
+        <li><fluent-text><strong>Partnerschaftliche Zusammenarbeit</strong></fluent-text></li>
+    </ul>
+</fluent-card>
 
-## Unsere Werte
+<fluent-card class="page-section">
+    <fluent-heading level="2">Timeline</fluent-heading>
+    <ul>
+        <li><fluent-text><strong>2023:</strong> Gründung als ThePowerAddicts</fluent-text></li>
+        <li><fluent-text><strong>2025:</strong> Rebranding zu KMUpower, Fokussierung auf KMU</fluent-text></li>
+        <li><fluent-text><strong>2025:</strong> Markteinführung der KMUpower Suite</fluent-text></li>
+    </ul>
+</fluent-card>
 
-- **Expertise mit Bodenständigkeit**
-- **Wertorientierung**
-- **Pragmatischer Fortschritt**
-- **Durchgängige Exzellenz**
-- **Partnerschaftliche Zusammenarbeit**
+<fluent-card class="page-section">
+    <fluent-heading level="2">Netzwerk & MVP-Status</fluent-heading>
+    <fluent-text>
+        Wir arbeiten mit zertifizierten Microsoft-Experten, MVPs und einem starken Partnernetzwerk zusammen.
+    </fluent-text>
+</fluent-card>
 
-## Timeline
-
-- **2023:** Gründung als ThePowerAddicts
-- **2025:** Rebranding zu KMUpower, Fokussierung auf KMU
-- **2025:** Markteinführung der KMUpower Suite
-- **2026:** Expansion nach Deutschland und Österreich (geplant)
-
-## Netzwerk & MVP-Status
-
-Wir arbeiten mit zertifizierten Microsoft-Experten, MVPs und einem starken Partnernetzwerk zusammen.
-
-[Mehr erfahren oder Kontakt aufnehmen](/kontakt/){: .btn .btn--primary .btn--large}
+<div style="text-align: center; margin-top: 20px;">
+    <fluent-button appearance="primary" href="/kontakt/">Mehr erfahren oder Kontakt aufnehmen</fluent-button>
+</div>
