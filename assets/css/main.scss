@@ -1,47 +1,35 @@
 ---
-# Nur Front Matter benötigt
 ---
-
-@charset "utf-8";
 
 /* Hier können Sie die Standardstile des Minimal Mistakes Themes überschreiben */
 
-/* Beispiel für die Anpassung des Haupttextes */
 .page__content {
   font-size: 1em;
-  
-  p, li {
-    font-size: 0.9em;
-  }
+}
+.page__content p,
+.page__content li {
+  font-size: 0.9em;
 }
 
-/* Beispiel für die Anpassung der Überschriften */
 .page__title {
   font-size: 2.5em;
 }
-
 h1 {
   color: #0066cc;
 }
-
 h2 {
   color: #0077cc;
 }
 
-/* Individuelle Anpassung der Linkfarben */
-a {
-  &:hover {
-    text-decoration: underline;
-  }
+a:hover {
+  text-decoration: underline;
 }
 
-/* Anpassung des Footers */
 .page__footer {
   color: #fff;
   background-color: #333;
 }
 
-/* Anpassung für mobile Geräte */
 @media (max-width: 768px) {
   .page__title {
     font-size: 1.8em;
