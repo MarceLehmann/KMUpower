@@ -1,0 +1,19 @@
+- name: Marcel Lehmann
+  position: Founder & CEO
+  bio: "Marcel Lehmann ist der Gründer von KMUpower und bringt über 10 Jahre Erfahrung in der Entwicklung von Lösungen für kleine und mittelständische Unternehmen mit. Seine Expertise liegt in der Microsoft Power Platform."
+  image: "images/marcel-lehmann.jpg"
+
+- name: Anna Müller
+  position: Head of Development
+  bio: "Anna Müller leitet das Entwicklungsteam bei KMUpower und hat einen Hintergrund in Softwareentwicklung und Projektmanagement. Sie ist leidenschaftlich daran interessiert, innovative Lösungen zu schaffen."
+  image: "images/anna-mueller.jpg"
+
+- name: Peter Schmidt
+  position: Marketing Manager
+  bio: "Peter Schmidt ist für das Marketing bei KMUpower verantwortlich. Mit seiner Erfahrung in digitalem Marketing hilft er, die Marke KMUpower in der Branche zu positionieren."
+  image: "images/peter-schmidt.jpg"
+
+- name: Lisa Becker
+  position: Customer Success Manager
+  bio: "Lisa Becker sorgt dafür, dass unsere Kunden mit unseren Lösungen zufrieden sind. Sie hat einen starken Fokus auf Kundenbeziehungen und unterstützt unsere Kunden bei der Implementierung."
+  image: "images/lisa-becker.jpg"
