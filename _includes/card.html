@@ -1,0 +1,15 @@
+<div class="card" style="border:1px solid #eee; border-radius:8px; padding:1.2em; margin:0.5em 0; box-shadow:0 2px 8px #0001; display:flex; align-items:center; gap:1em;">
+  {% if include.icon %}
+    <span style="font-size:2em; color:#38c9c3;">
+      {% case include.icon %}
+        {% when "zap" %}⚡
+        {% when "users" %}👥
+        {% else %}🔹
+      {% endcase %}
+    </span>
+  {% endif %}
+  <div>
+    <strong style="font-size:1.1em;">{{ include.title }}</strong><br>
+    <span>{{ include.text }}</span>
+  </div>
+</div>
