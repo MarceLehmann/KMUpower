@@ -17,6 +17,23 @@ author:
   avatar: "/assets/images/avatar.jpg"
   bio: "Gründer & CEO | Microsoft MVP | Digitalisierungsexperte für KMU im DACH-Raum"
 
+# Navigation
+navigation:
+  main:
+    - title: "Home"
+      url: /
+    - title: "Über uns"  
+      url: /about/
+    - title: "Services"
+      url: /services/
+    - title: "Kontakt"
+      url: /contact/
+
+# Collections (to prevent post issues)
+collections:
+  posts:
+    output: false
+
 defaults:
   - scope:
       path: ""
@@ -24,5 +41,6 @@ defaults:
     values:
       layout: single
       author_profile: false
+      show_date: false
       seo:
         type: website

@@ -1,0 +1,10 @@
+# Navigation für die Website
+main:
+  - title: "Home"
+    url: /
+  - title: "Über uns"
+    url: /about/
+  - title: "Services"
+    url: /services/
+  - title: "Kontakt"
+    url: /contact/

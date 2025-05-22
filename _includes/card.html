@@ -1,15 +1,19 @@
-<div class="card" style="border:1px solid #eee; border-radius:8px; padding:1.2em; margin:0.5em 0; box-shadow:0 2px 8px #0001; display:flex; align-items:center; gap:1em;">
-  {% if include.icon %}
-    <span style="font-size:2em; color:#38c9c3;">
-      {% case include.icon %}
-        {% when "zap" %}⚡
-        {% when "users" %}👥
-        {% else %}🔹
-      {% endcase %}
-    </span>
-  {% endif %}
-  <div>
-    <strong style="font-size:1.1em;">{{ include.title }}</strong><br>
-    <span>{{ include.text }}</span>
+<div class="archive__item">
+  <div class="archive__item-body">
+    {% if include.icon %}
+      <div class="archive__item-teaser" style="background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);">
+        <span style="font-size: 2.5em; color: var(--primary-color, #2563eb);">
+          {% case include.icon %}
+            {% when "zap" %}⚡
+            {% when "users" %}👥
+            {% else %}🔹
+          {% endcase %}
+        </span>
+      </div>
+    {% endif %}
+    <h3 class="archive__item-title">{{ include.title }}</h3>
+    <div class="archive__item-excerpt">
+      <p>{{ include.text }}</p>
+    </div>
   </div>
 </div>
