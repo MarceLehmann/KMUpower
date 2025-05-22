@@ -1,8 +1,8 @@
-title: "KMUpower"
+title: KMUpower
 email: info@kmupower.ch
-description: "Wir ermächtigen kleine und mittelständische Unternehmen durch digitale Exzellenz."
+description: "Wir ermächtigen KMUs durch digitale Exzellenz."
+url: "https://marcelehlmann.github.io"
 baseurl: "/KMUpower"
-url: "https://www.kmupower.ch"
 
 plugins:
   - jekyll-seo-tag
@@ -10,11 +10,13 @@ plugins:
   - jekyll-remote-theme
 
 remote_theme: "mmistakes/minimal-mistakes"
+
 lang: de
 author:
   name: Marcel Lehmann
   avatar: "/assets/images/avatar.jpg"
   bio: "Gründer & CEO | Microsoft MVP | Digitalisierungsexperte für KMU im DACH-Raum"
+
 defaults:
   - scope:
       path: ""
@@ -23,4 +25,4 @@ defaults:
       layout: single
       author_profile: false
       seo:
-        type: "website"
+        type: website
