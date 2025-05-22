@@ -51,6 +51,6 @@ Die führende Kraft für intelligente Digitalisierung im DACH-KMU-Sektor sein.
 > „Technologie darf kein Wettbewerbsnachteil sein – wir machen sie zum Wachstumstreiber.“
 
 <div class="cards">
-{% include card title="30 % Effizienzsteigerung" text="Unsere Pilotkunden erreichen 30 % Zeitersparnis in digitalisierten Prozessen." icon="zap" %}
-{% include card title="10 KMU-Kunden" text="In den ersten 6 Monaten vertrauen uns bereits 10 zahlende Unternehmen." icon="users" %}
+{% include card.html title="30 % Effizienzsteigerung" text="Unsere Pilotkunden erreichen 30 % Zeitersparnis in digitalisierten Prozessen." icon="zap" %}
+{% include card.html title="10 KMU-Kunden" text="In den ersten 6 Monaten vertrauen uns bereits 10 zahlende Unternehmen." icon="users" %}
 </div>
