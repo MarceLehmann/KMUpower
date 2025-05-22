@@ -15,24 +15,22 @@ json_ld:
   - "@context": "https://schema.org"
     "@type": "Organization"
     name: "KMUpower"
-    url: "https://www.kmupower.ch"
-    logo: "https://www.kmupower.ch/assets/images/logo.svg"
+    url: "https://marcelehlmann.github.io/KMUpower/"
+    logo: "https://marcelehlmann.github.io/KMUpower/assets/images/logo.svg"
   - "@context": "https://schema.org"
     "@type": "BreadcrumbList"
     itemListElement:
       - "@type": "ListItem"
         position: 1
         name: "Home"
-        item: "https://www.kmupower.ch/"
----
-
+        item: "https://marcelehlmann.github.io/KMUpower/"
 layout: home
 hero:
   title: "Wir ermächtigen KMUs durch digitale Exzellenz"
   image: "/assets/images/hero-digital.jpg"
   cta:
     - text: "Kontakt aufnehmen"
-      url: "/contact"
+      url: "/KMUpower/contact/"
 features:
   - title: "Prozessautomatisierung"
     description: "Schnelle, Low-Code-Workflows mit Power Automate."
@@ -44,15 +42,15 @@ features:
 
 ## Warum KMUpower?
 
-**Unsere Mission:**
+**Unsere Mission:**  
 Wir ermächtigen kleine und mittelständische Unternehmen durch digitale Exzellenz.
 
-**Unsere Vision:**
+**Unsere Vision:**  
 Die führende Kraft für intelligente Digitalisierung im DACH-KMU-Sektor sein.
 
 > „Technologie darf kein Wettbewerbsnachteil sein – wir machen sie zum Wachstumstreiber.“
 
 <div class="cards">
-{% include card.html title="30 % Effizienzsteigerung" text="Unsere Pilotkunden erreichen 30 % Zeitersparnis in digitalisierten Prozessen." icon="zap" %}
-{% include card.html title="10 KMU-Kunden" text="In den ersten 6 Monaten vertrauen uns bereits 10 zahlende Unternehmen." icon="users" %}
+{% include card title="30 % Effizienzsteigerung" text="Unsere Pilotkunden erreichen 30 % Zeitersparnis in digitalisierten Prozessen." icon="zap" %}
+{% include card title="10 KMU-Kunden" text="In den ersten 6 Monaten vertrauen uns bereits 10 zahlende Unternehmen." icon="users" %}
 </div>

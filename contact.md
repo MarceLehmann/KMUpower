@@ -2,6 +2,7 @@
 title: "Kontakt | KMUpower"
 description: "Kontaktieren Sie uns für eine Beratung zur Prozessautomatisierung & Low-Code-Entwicklung."
 permalink: /contact/
+layout: page
 seo:
   type: "ContactPage"
   image: "/assets/images/contact-preview.jpg"
@@ -18,11 +19,11 @@ json_ld:
       - "@type": "ListItem"
         position: 1
         name: "Home"
-        item: "https://www.kmupower.ch/"
+        item: "https://marcelehlmann.github.io/KMUpower/"
       - "@type": "ListItem"
         position: 2
         name: "Kontakt"
-        item: "https://www.kmupower.ch/contact/"
+        item: "https://marcelehlmann.github.io/KMUpower/contact/"
 ---
 
 # Kontakt
