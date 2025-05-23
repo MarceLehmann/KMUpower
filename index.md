@@ -88,4 +88,18 @@ feature_row:
       </div>
     </div>
   </div>
+  
+  <div class="feature__item--center">
+    <div class="archive__item" style="opacity:0; pointer-events:none;">
+      <div class="archive__item-teaser">
+        <i class="fas fa-star fa-3x" style="color: #38c9c3;"></i>
+      </div>
+      <div class="archive__item-body">
+        <h2 class="archive__item-title">&nbsp;</h2>
+        <div class="archive__item-excerpt">
+          <p>&nbsp;</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
