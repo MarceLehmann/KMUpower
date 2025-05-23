@@ -1,5 +1,5 @@
 ---
-title: "Über uns | KMUpower"
+title: "Über uns"
 description: "Erfahren Sie mehr über das Kernteam, unsere Mission und Werte."
 permalink: /about/
 layout: splash

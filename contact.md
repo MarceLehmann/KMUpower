@@ -1,5 +1,5 @@
 ---
-title: "Kontakt | KMUpower"
+title: "Kontakt"
 description: "Kontaktieren Sie uns für eine Beratung zur Prozessautomatisierung & Low-Code-Entwicklung."
 permalink: /contact/
 layout: splash

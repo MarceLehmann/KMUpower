@@ -3,7 +3,7 @@ email: info@kmupower.ch
 description: "Wir ermächtigen KMUs durch digitale Exzellenz."
 url: "https://marcelehmann.github.io"
 baseurl: "/KMUpower"
-logo: "/assets/images/logo.png"
+logo: "/assets/images/LOGO_KMUpower.webp"
 masthead_title: " "  # Leeren, um nur Logo zu zeigen
 
 # IMPORTANT: Ensure that these plugins are installed for the theme to work properly
