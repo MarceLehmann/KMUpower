@@ -10,9 +10,17 @@ author: Marcel Lehmann # Oder der Name des Autors/Unternehmens
 baseurl: "/KMUpower" # Leer lassen, wenn im Root-Verzeichnis der Domain
 url: "https://marcelehmann.github.io" # Vollständige URL Ihrer Seite, z.B. https://www.kmupower.ch
 
+# Theme settings
+theme: jekyll-theme-primer  # Explizit das Theme setzen, das GitHub Pages standardmäßig verwendet
+
 # Build settings
 markdown: kramdown
 permalink: pretty # Für saubere URLs
+
+# SASS/SCSS settings
+sass:
+  sass_dir: assets/css
+  style: compressed
 
 plugins:
   - jekyll-feed    # Für einen RSS-Feed

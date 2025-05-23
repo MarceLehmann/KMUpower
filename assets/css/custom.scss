@@ -1,4 +1,5 @@
 ---
+# This ensures Jekyll processes this file
 ---
 
 /*
@@ -35,8 +36,7 @@ TABLE OF CONTENTS
 1. IMPORTS
 ================================================================================
 */
-@import "minimal-mistakes/skins/default";
-@import "minimal-mistakes";
+/* No external theme imports needed - using standard Jekyll theme */
 
 /*
 ================================================================================

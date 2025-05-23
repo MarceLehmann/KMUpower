@@ -1,0 +1,11 @@
+---
+# Only the main style.scss file needs front matter (the dashes are enough)
+---
+
+/* Import Jekyll Primer theme (GitHub Pages default) 
+   This uses a direct reference to avoid issues with variable substitution */
+@import "jekyll-theme-primer";
+
+/* Custom CSS */
+@import "main";
+@import "custom";
