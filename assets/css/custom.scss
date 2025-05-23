@@ -83,10 +83,10 @@
 
 /* Feature Row Styling */
 .feature__wrapper {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin: 2rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 2em;
+  width: 100%;
 }
 
 .feature__item {
@@ -96,6 +96,19 @@
   padding: 2rem;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 2em;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .feature__item {
+    width: calc(33.33% - 2em);
+    margin-right: 2em;
+  }
+
+  .feature__item:last-child {
+    margin-right: 0;
+  }
 }
 
 .feature__item:hover {
@@ -103,7 +116,29 @@
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
+/* Centered Feature Items */
 .feature__item--center {
+  margin-bottom: 2em;
+  width: 100%;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .feature__item--center {
+    width: calc(33.33% - 2em);
+    margin-right: 2em;
+  }
+
+  .feature__item--center:last-child {
+    margin-right: 0;
+  }
+}
+
+.feature__item--center .archive__item {
+  align-items: center;
+}
+
+.feature__item--center .archive__item-body {
   text-align: center;
 }
 
@@ -182,33 +217,82 @@
 
 /* Archive Items (for success stories) */
 .archive__item {
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .archive__item:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
 }
 
 .archive__item-teaser {
-  padding: 2rem;
-  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+  background-color: #f8fafc;
+  min-height: 120px;
 }
 
 .archive__item-body {
   padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .archive__item-title {
-  color: var(--primary-color);
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
   font-weight: 600;
+  color: var(--color-text);
+}
+
+.archive__item-excerpt {
+  margin-bottom: 1.5rem;
+  flex: 1;
+  font-size: 0.95rem;
+}
+
+.archive__item-excerpt p:last-child {
+  margin-bottom: 0;
+}
+
+.btn--primary {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+.btn--primary:hover {
+  background-color: var(--secondary-color);
+  text-decoration: none;
+}
+
+/* Fix for card display in feature_row */
+.feature__item .archive__item-excerpt {
+  margin-top: 0.5em;
+}
+
+/* Fix for first block of cards */
+.feature__wrapper:first-of-type {
+  margin-top: 2em;
 }
 
 /* Typography Improvements */
@@ -277,4 +361,80 @@ ul li {
   height: 4px;
   background-color: var(--primary-color);
   margin: 0.5em auto 0;
+}
+
+/* Add spacing between sections */
+.page__content h2 {
+  margin-top: 2em;
+  margin-bottom: 1em;
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+/* Make notice boxes more attractive */
+.notice--primary {
+  background-color: rgba(56, 201, 195, 0.1);
+  border-left: 4px solid var(--primary-color);
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+/* Improve the appearance of icons */
+.archive__item-teaser i {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  padding: 1.5rem;
+  border-radius: 50%;
+  background-color: rgba(56, 201, 195, 0.1);
+  box-shadow: 0 4px 10px rgba(56, 201, 195, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.archive__item:hover .archive__item-teaser i {
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(56, 201, 195, 0.3);
+}
+
+/* Improve images in cards */
+.archive__item-teaser img {
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.archive__item:hover .archive__item-teaser img {
+  transform: scale(1.02);
+}
+
+/* Consistent image sizes for team members */
+.feature__item .archive__item-teaser img {
+  max-width: 200px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Improve spacing for feature wrappers */
+.feature__wrapper:first-of-type {
+  margin-top: 3em;
+}
+
+.feature__wrapper + .feature__wrapper {
+  margin-top: 3em;
+}
+
+/* Consistent button styling */
+.btn {
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  font-size: 0.85em;
+}
+
+.btn--large {
+  padding: 0.75em 1.5em;
+  font-size: 0.95em;
 }

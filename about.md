@@ -75,9 +75,9 @@ excerpt: "Unsere Mission: Digitale Exzellenz für kleine und mittelständische U
 
 ## Unsere Werte
 
-<div class="feature__wrapper">
-  <div class="feature__item--center">
-    <div class="archive__item">      <div class="archive__item-teaser">
+<div class="feature__wrapper">  <div class="feature__item--center">
+    <div class="archive__item">
+      <div class="archive__item-teaser">
         <i class="fas fa-handshake fa-3x" style="color: #38c9c3;"></i>
       </div>
       <div class="archive__item-body">
@@ -86,9 +86,9 @@ excerpt: "Unsere Mission: Digitale Exzellenz für kleine und mittelständische U
       </div>
     </div>
   </div>
-  
-  <div class="feature__item--center">
-    <div class="archive__item">      <div class="archive__item-teaser">
+    <div class="feature__item--center">
+    <div class="archive__item">
+      <div class="archive__item-teaser">
         <i class="fas fa-chart-line fa-3x" style="color: #38c9c3;"></i>
       </div>
       <div class="archive__item-body">
@@ -97,9 +97,9 @@ excerpt: "Unsere Mission: Digitale Exzellenz für kleine und mittelständische U
       </div>
     </div>
   </div>
-  
-  <div class="feature__item--center">
-    <div class="archive__item">      <div class="archive__item-teaser">
+    <div class="feature__item--center">
+    <div class="archive__item">
+      <div class="archive__item-teaser">
         <i class="fas fa-rocket fa-3x" style="color: #38c9c3;"></i>
       </div>
       <div class="archive__item-body">
@@ -108,9 +108,9 @@ excerpt: "Unsere Mission: Digitale Exzellenz für kleine und mittelständische U
       </div>
     </div>
   </div>
-  
-  <div class="feature__item--center">
-    <div class="archive__item">      <div class="archive__item-teaser">
+    <div class="feature__item--center">
+    <div class="archive__item">
+      <div class="archive__item-teaser">
         <i class="fas fa-award fa-3x" style="color: #38c9c3;"></i>
       </div>
       <div class="archive__item-body">
@@ -119,9 +119,9 @@ excerpt: "Unsere Mission: Digitale Exzellenz für kleine und mittelständische U
       </div>
     </div>
   </div>
-  
-  <div class="feature__item--center">
-    <div class="archive__item">      <div class="archive__item-teaser">
+    <div class="feature__item--center">
+    <div class="archive__item">
+      <div class="archive__item-teaser">
         <i class="fas fa-users fa-3x" style="color: #38c9c3;"></i>
       </div>
       <div class="archive__item-body">

@@ -13,7 +13,8 @@ header:
 excerpt: "Maßgeschneiderte Digitalisierungslösungen für kleine und mittelständische Unternehmen"
 ---
 
-<div class="feature__wrapper">  <div class="feature__item">
+<div class="feature__wrapper">
+  <div class="feature__item">
     <div class="archive__item">
       <div class="archive__item-teaser">
         <i class="fas fa-cogs fa-4x" style="color: #38c9c3;"></i>
@@ -104,9 +105,9 @@ excerpt: "Maßgeschneiderte Digitalisierungslösungen für kleine und mittelstä
 
 ## Referenzprojekte
 
-<div class="feature__wrapper">
-  <div class="feature__item">
-    <div class="archive__item">      <div class="archive__item-teaser">
+<div class="feature__wrapper">  <div class="feature__item">
+    <div class="archive__item">
+      <div class="archive__item-teaser">
         <i class="fas fa-industry fa-3x" style="color: #38c9c3;"></i>
       </div>
       <div class="archive__item-body">
@@ -118,9 +119,9 @@ excerpt: "Maßgeschneiderte Digitalisierungslösungen für kleine und mittelstä
       </div>
     </div>
   </div>
-
   <div class="feature__item">
-    <div class="archive__item">      <div class="archive__item-teaser">
+    <div class="archive__item">
+      <div class="archive__item-teaser">
         <i class="fas fa-briefcase fa-3x" style="color: #38c9c3;"></i>
       </div>
       <div class="archive__item-body">
@@ -132,9 +133,9 @@ excerpt: "Maßgeschneiderte Digitalisierungslösungen für kleine und mittelstä
       </div>
     </div>
   </div>
-
   <div class="feature__item">
-    <div class="archive__item">      <div class="archive__item-teaser">
+    <div class="archive__item">
+      <div class="archive__item-teaser">
         <i class="fas fa-store fa-3x" style="color: #38c9c3;"></i>
       </div>
       <div class="archive__item-body">

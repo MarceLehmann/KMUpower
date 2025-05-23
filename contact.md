@@ -20,9 +20,9 @@ excerpt: "Lassen Sie uns gemeinsam besprechen, wie wir Ihr Unternehmen durch dig
 
 ## Schnellkontakt
 
-<div class="feature__wrapper">
-  <div class="feature__item--center">
-    <div class="archive__item">      <div class="archive__item-teaser">
+<div class="feature__wrapper">  <div class="feature__item--center">
+    <div class="archive__item">
+      <div class="archive__item-teaser">
         <i class="fas fa-envelope fa-3x" style="color: #38c9c3;"></i>
       </div>
       <div class="archive__item-body">
@@ -31,9 +31,9 @@ excerpt: "Lassen Sie uns gemeinsam besprechen, wie wir Ihr Unternehmen durch dig
       </div>
     </div>
   </div>
-  
-  <div class="feature__item--center">
-    <div class="archive__item">      <div class="archive__item-teaser">
+    <div class="feature__item--center">
+    <div class="archive__item">
+      <div class="archive__item-teaser">
         <i class="fas fa-phone fa-3x" style="color: #38c9c3;"></i>
       </div>
       <div class="archive__item-body">
@@ -42,9 +42,9 @@ excerpt: "Lassen Sie uns gemeinsam besprechen, wie wir Ihr Unternehmen durch dig
       </div>
     </div>
   </div>
-  
-  <div class="feature__item--center">
-    <div class="archive__item">      <div class="archive__item-teaser">
+    <div class="feature__item--center">
+    <div class="archive__item">
+      <div class="archive__item-teaser">
         <i class="fas fa-map-marker-alt fa-3x" style="color: #38c9c3;"></i>
       </div>
       <div class="archive__item-body">
