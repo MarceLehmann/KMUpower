@@ -3,14 +3,13 @@ Verwendung:
 {% include cta.html 
   title="Bereit für die digitale Transformation?"
   text="Kontaktieren Sie uns für eine kostenlose Erstberatung."
-  button_text="Kontakt aufnehmen"
-  button_url="/contact/"
-  background="#2563eb"
+  button_text="Kontakt aufnehmen"  button_url="/contact/"
+  background="#38c9c3"
   color="white"
 %}
 {% endcomment %}
 
-{% assign bg_color = include.background | default: "#2563eb" %}
+{% assign bg_color = include.background | default: "#38c9c3" %}
 {% assign text_color = include.color | default: "white" %}
 {% assign btn_class = include.button_class | default: "btn--primary btn--large" %}
 
@@ -38,7 +37,7 @@ Verwendung:
   position: relative;
   overflow: hidden;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
-  background-color: var(--cta-bg, #2563eb);
+  background-color: var(--cta-bg, #38c9c3);
   color: var(--cta-color, white);
 }
 
@@ -83,7 +82,7 @@ Verwendung:
   transition: all 0.3s ease;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   border: none;
-  color: var(--cta-bg, #2563eb);
+  color: var(--cta-bg, #38c9c3);
   background-color: var(--cta-color, white);
 }
   border: none;

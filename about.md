@@ -74,9 +74,8 @@ header:
 
 <div class="feature__wrapper">
   <div class="feature__item--center">
-    <div class="archive__item">
-      <div class="archive__item-teaser">
-        <i class="fas fa-handshake fa-3x" style="color: #2563eb;"></i>
+    <div class="archive__item">      <div class="archive__item-teaser">
+        <i class="fas fa-handshake fa-3x" style="color: #38c9c3;"></i>
       </div>
       <div class="archive__item-body">
         <h3>Expertise mit Bodenständigkeit</h3>
@@ -86,9 +85,8 @@ header:
   </div>
   
   <div class="feature__item--center">
-    <div class="archive__item">
-      <div class="archive__item-teaser">
-        <i class="fas fa-chart-line fa-3x" style="color: #2563eb;"></i>
+    <div class="archive__item">      <div class="archive__item-teaser">
+        <i class="fas fa-chart-line fa-3x" style="color: #38c9c3;"></i>
       </div>
       <div class="archive__item-body">
         <h3>Wertorientierung</h3>
@@ -98,9 +96,8 @@ header:
   </div>
   
   <div class="feature__item--center">
-    <div class="archive__item">
-      <div class="archive__item-teaser">
-        <i class="fas fa-rocket fa-3x" style="color: #2563eb;"></i>
+    <div class="archive__item">      <div class="archive__item-teaser">
+        <i class="fas fa-rocket fa-3x" style="color: #38c9c3;"></i>
       </div>
       <div class="archive__item-body">
         <h3>Pragmatischer Fortschritt</h3>
@@ -110,9 +107,8 @@ header:
   </div>
   
   <div class="feature__item--center">
-    <div class="archive__item">
-      <div class="archive__item-teaser">
-        <i class="fas fa-award fa-3x" style="color: #2563eb;"></i>
+    <div class="archive__item">      <div class="archive__item-teaser">
+        <i class="fas fa-award fa-3x" style="color: #38c9c3;"></i>
       </div>
       <div class="archive__item-body">
         <h3>Durchgängige Exzellenz</h3>
@@ -122,9 +118,8 @@ header:
   </div>
   
   <div class="feature__item--center">
-    <div class="archive__item">
-      <div class="archive__item-teaser">
-        <i class="fas fa-users fa-3x" style="color: #2563eb;"></i>
+    <div class="archive__item">      <div class="archive__item-teaser">
+        <i class="fas fa-users fa-3x" style="color: #38c9c3;"></i>
       </div>
       <div class="archive__item-body">
         <h3>Partnerschaftliche Zusammenarbeit</h3>

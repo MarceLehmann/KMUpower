@@ -19,9 +19,8 @@ header:
 
 <div class="feature__wrapper">
   <div class="feature__item--center">
-    <div class="archive__item">
-      <div class="archive__item-teaser">
-        <i class="fas fa-envelope fa-3x" style="color: #2563eb;"></i>
+    <div class="archive__item">      <div class="archive__item-teaser">
+        <i class="fas fa-envelope fa-3x" style="color: #38c9c3;"></i>
       </div>
       <div class="archive__item-body">
         <h3>E-Mail</h3>
@@ -31,9 +30,8 @@ header:
   </div>
   
   <div class="feature__item--center">
-    <div class="archive__item">
-      <div class="archive__item-teaser">
-        <i class="fas fa-phone fa-3x" style="color: #2563eb;"></i>
+    <div class="archive__item">      <div class="archive__item-teaser">
+        <i class="fas fa-phone fa-3x" style="color: #38c9c3;"></i>
       </div>
       <div class="archive__item-body">
         <h3>Telefon</h3>
@@ -43,9 +41,8 @@ header:
   </div>
   
   <div class="feature__item--center">
-    <div class="archive__item">
-      <div class="archive__item-teaser">
-        <i class="fas fa-map-marker-alt fa-3x" style="color: #2563eb;"></i>
+    <div class="archive__item">      <div class="archive__item-teaser">
+        <i class="fas fa-map-marker-alt fa-3x" style="color: #38c9c3;"></i>
       </div>
       <div class="archive__item-body">
         <h3>Standort</h3>
@@ -140,9 +137,9 @@ header:
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
-  border-color: #2563eb;
+  border-color: #38c9c3;
   outline: none;
-  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+  box-shadow: 0 0 0 3px rgba(56, 201, 195, 0.2);
 }
 </style>
 
