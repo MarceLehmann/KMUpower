@@ -16,9 +16,39 @@
   --font-sans: "Poppins", sans-serif;
 }
 
+/* Ensure content is centered and has reasonable width */
+.page {
+  width: 100%;
+  padding-right: 1em;
+  padding-left: 1em;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 768px) {
+  .page {
+    width: 90%;
+    max-width: 1280px;
+  }
+}
+
 /* Hero Section Improvements */
 .page__hero {
   margin-bottom: 2em;
+  position: relative;
+  min-height: 350px; /* Mindesthöhe für alle Hero-Sections */
+}
+
+.page__hero-image {
+  width: 100%;
+  height: auto;
+}
+
+.page__hero--overlay {
+  padding: 6em 0; /* Einheitliche Polsterung oben und unten - erhöht für mehr Höhe */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .page__hero-caption {
@@ -26,6 +56,29 @@
   color: white;
   padding: 0.5em 1em;
   border-radius: 4px;
+}
+
+.page__lead {
+  font-size: 1.5em !important;
+  font-weight: 300;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.page__hero--overlay .page__title {
+  font-size: 2.5em !important;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  margin-bottom: 0.5em;
+}
+
+/* Stile für Buttons in der Hero-Section */
+.btn--primary {
+  background-color: var(--primary-color) !important;
+  color: white !important;
+}
+
+.btn--primary:hover {
+  background-color: var(--secondary-color) !important;
 }
 
 /* Feature Row Styling */
@@ -207,4 +260,21 @@ ul li {
   background-color: #1f2937;
   color: white;
   margin-top: 4rem;
+}
+
+/* Allgemeine Stile für alle Sections */
+.section-title {
+  text-align: center;
+  margin-bottom: 2em;
+  color: var(--color-text);
+  position: relative;
+}
+
+.section-title:after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 4px;
+  background-color: var(--primary-color);
+  margin: 0.5em auto 0;
 }

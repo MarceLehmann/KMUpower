@@ -2,14 +2,17 @@
 title: "Kontakt | KMUpower"
 description: "Kontaktieren Sie uns für eine Beratung zur Prozessautomatisierung & Low-Code-Entwicklung."
 permalink: /contact/
-layout: single
+layout: splash
 header:
   overlay_color: "#38c9c3"
   overlay_filter: "0.3"
   overlay_image: /assets/images/contact-preview.jpg
+  actions:
+    - label: "Termin vereinbaren"
+      url: "https://calendly.com/kmupower/30min"
+      class: "btn--primary btn--large"
+excerpt: "Lassen Sie uns gemeinsam besprechen, wie wir Ihr Unternehmen durch digitale Exzellenz auf die nächste Stufe heben können."
 ---
-
-# Kontaktieren Sie uns
 
 <div class="notice--primary">
 <p>Wir freuen uns darauf, von Ihnen zu hören! Lassen Sie uns gemeinsam besprechen, wie wir Ihr Unternehmen durch digitale Exzellenz auf die nächste Stufe heben können.</p>

@@ -2,14 +2,17 @@
 title: "Über uns | KMUpower"
 description: "Erfahren Sie mehr über das Kernteam, unsere Mission und Werte."
 permalink: /about/
-layout: single
+layout: splash
 header:
   overlay_color: "#38c9c3"
   overlay_filter: "0.3"
   overlay_image: /assets/images/team-preview.jpg
+  actions:
+    - label: "Kontakt aufnehmen"
+      url: "/contact/"
+      class: "btn--primary btn--large"
+excerpt: "Unsere Mission: Digitale Exzellenz für kleine und mittelständische Unternehmen zugänglich machen."
 ---
-
-# Über KMUpower
 
 <div class="notice--primary">
 <p>KMUpower wurde 2023 mit einer klaren Mission gegründet: Digitale Exzellenz für kleine und mittelständische Unternehmen zugänglich zu machen.</p>
