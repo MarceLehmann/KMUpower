@@ -1,0 +1,162 @@
+{% comment %}
+Verwendung:
+{% include service-box.html 
+  title="Prozessautomatisierung"
+  description="Automatisieren Sie wiederkehrende Aufgaben und steigern Sie die Effizienz Ihres Teams mit Low-Code-Lösungen."
+  icon="automation"
+  image="/assets/images/services/automation.jpg"
+  button_text="Mehr erfahren"
+  button_url="/services/#automation"
+%}
+{% endcomment %}
+
+<div class="service-box">
+  <div class="service-box-inner">
+    <div class="service-box-front">
+      {% if include.image %}
+        <div class="service-box-image" style="background-image: url('{{ include.image | relative_url }}')">
+          <div class="service-box-overlay"></div>
+          <h3 class="service-box-title">{{ include.title }}</h3>
+        </div>
+      {% else %}
+        <div class="service-box-icon">
+          {% case include.icon %}
+            {% when "automation" %}<i class="fas fa-cogs"></i>
+            {% when "apps" %}<i class="fas fa-mobile-alt"></i>
+            {% when "training" %}<i class="fas fa-graduation-cap"></i>
+            {% when "consulting" %}<i class="fas fa-comments"></i>
+            {% when "integration" %}<i class="fas fa-plug"></i>
+            {% when "support" %}<i class="fas fa-life-ring"></i>
+            {% else %}<i class="fas fa-check-circle"></i>
+          {% endcase %}
+          <h3 class="service-box-title">{{ include.title }}</h3>
+        </div>
+      {% endif %}
+    </div>
+    
+    <div class="service-box-back">
+      <h3 class="service-box-title">{{ include.title }}</h3>
+      <p class="service-box-description">{{ include.description }}</p>
+      
+      {% if include.button_text and include.button_url %}
+        <a href="{{ include.button_url | relative_url }}" class="service-box-button">
+          {{ include.button_text }}
+        </a>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+<style>
+.service-box {
+  perspective: 1000px;
+  height: 300px;
+  margin-bottom: 30px;
+}
+
+.service-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.service-box:hover .service-box-inner {
+  transform: rotateY(180deg);
+}
+
+.service-box-front, .service-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.service-box-front {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-box-back {
+  background-color: var(--primary-color, #2563eb);
+  color: white;
+  transform: rotateY(180deg);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.service-box-image {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-box-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.service-box-icon {
+  padding: 2rem;
+}
+
+.service-box-icon i {
+  font-size: 3rem;
+  color: var(--primary-color, #2563eb);
+  margin-bottom: 1rem;
+}
+
+.service-box-title {
+  position: relative;
+  color: white;
+  font-weight: 600;
+  z-index: 2;
+  margin: 0 0 1rem 0;
+}
+
+.service-box-front .service-box-title {
+  margin-top: 1rem;
+  color: var(--primary-color, #2563eb);
+}
+
+.service-box-description {
+  margin-bottom: 1.5rem;
+}
+
+.service-box-button {
+  display: inline-block;
+  background-color: white;
+  color: var(--primary-color, #2563eb);
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin-top: auto;
+}
+
+.service-box-button:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+</style>

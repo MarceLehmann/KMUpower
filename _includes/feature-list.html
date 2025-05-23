@@ -1,0 +1,147 @@
+{% comment %}
+Verwendung:
+{% include feature-list.html 
+  title="Unsere Vorteile"
+  subtitle="Warum KMUpower die richtige Wahl ist"
+  features="Schnelle Implementierung, Kosteneffizient, Maßgeschneidert, Skalierbar, Benutzerfreundlich"
+  descriptions="Low-Code bedeutet schnelle Ergebnisse in Wochen statt Monaten., 70% günstiger als herkömmliche Softwareentwicklung., Perfekt auf Ihre Prozesse und Bedürfnisse abgestimmt., Wächst mit Ihrem Unternehmen und passt sich an., Intuitive Benutzeroberflächen für alle Mitarbeiter."
+  icons="bolt, coin, tools, chart-line, users"
+%}
+{% endcomment %}
+
+{% assign feature_list = include.features | split: ", " %}
+{% assign description_list = include.descriptions | split: ", " %}
+{% assign icon_list = include.icons | split: ", " %}
+
+<section class="feature-list">
+  {% if include.title or include.subtitle %}
+    <div class="feature-list-header">
+      {% if include.title %}
+        <h2 class="feature-list-title">{{ include.title }}</h2>
+      {% endif %}
+      
+      {% if include.subtitle %}
+        <p class="feature-list-subtitle">{{ include.subtitle }}</p>
+      {% endif %}
+    </div>
+  {% endif %}
+  
+  <div class="feature-list-container">
+    {% for feature in feature_list %}
+      <div class="feature-list-item">
+        <div class="feature-list-icon">
+          {% assign icon = icon_list[forloop.index0] | default: "check" %}
+          <span class="feature-icon">
+            {% case icon %}
+              {% when "bolt" %}⚡
+              {% when "coin" %}💰
+              {% when "tools" %}🔧
+              {% when "chart-line" %}📈
+              {% when "users" %}👥
+              {% when "shield" %}🛡️
+              {% when "clock" %}⏱️
+              {% when "check" %}✅
+              {% when "star" %}⭐
+              {% when "light" %}💡
+              {% else %}✓
+            {% endcase %}
+          </span>
+        </div>
+        <div class="feature-list-content">
+          <h3 class="feature-list-item-title">{{ feature }}</h3>
+          {% if description_list[forloop.index0] %}
+            <p class="feature-list-item-description">{{ description_list[forloop.index0] }}</p>
+          {% endif %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+<style>
+.feature-list {
+  margin: 3rem 0;
+}
+
+.feature-list-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.feature-list-title {
+  color: #111827;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.feature-list-subtitle {
+  color: #6b7280;
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.feature-list-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.feature-list-item {
+  display: flex;
+  align-items: flex-start;
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-list-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.feature-list-icon {
+  margin-right: 1rem;
+  font-size: 1.5rem;
+  color: var(--primary-color, #2563eb);
+  background: rgba(37, 99, 235, 0.1);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.feature-list-item-title {
+  color: #111827;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+}
+
+.feature-list-item-description {
+  color: #4b5563;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .feature-list-container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .feature-list-title {
+    font-size: 1.75rem;
+  }
+  
+  .feature-list-subtitle {
+    font-size: 1rem;
+  }
+}
+</style>

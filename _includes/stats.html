@@ -1,0 +1,174 @@
+{% comment %}
+Verwendung:
+{% include stats.html 
+  values="50, 85, 5000, 98"
+  labels="Zufriedene Kunden, Prozessautomatisierungen, Eingesparte Stunden, Erfolgsrate in %"
+  icons="users, cogs, clock, chart-line"
+  background="#f3f4f6"
+%}
+{% endcomment %}
+
+{% assign values = include.values | split: ", " %}
+{% assign labels = include.labels | split: ", " %}
+{% assign icons = include.icons | split: ", " %}
+{% assign bg_color = include.background | default: "transparent" %}
+
+<!--
+{% if bg_color != "transparent" %}
+  <div class="stats-section custom-bg" style="background-color: {{ bg_color }};">
+{% else %}
+  <div class="stats-section">
+{% endif %}
+-->
+<div class="stats-section custom-bg" style="background-color: #f3f4f6;">
+  <div class="stats-container">
+    {% for value in values %}
+      <div class="stat-item">
+        <div class="stat-icon">
+          {% assign icon = icons[forloop.index0] | default: "star" %}
+          {% case icon %}
+            {% when "users" %}<i class="fas fa-users"></i>
+            {% when "cogs" %}<i class="fas fa-cogs"></i>
+            {% when "clock" %}<i class="fas fa-clock"></i>
+            {% when "chart-line" %}<i class="fas fa-chart-line"></i>
+            {% when "check" %}<i class="fas fa-check-circle"></i>
+            {% when "thumbs-up" %}<i class="fas fa-thumbs-up"></i>
+            {% when "briefcase" %}<i class="fas fa-briefcase"></i>
+            {% when "globe" %}<i class="fas fa-globe"></i>
+            {% when "lightbulb" %}<i class="fas fa-lightbulb"></i>
+            {% when "award" %}<i class="fas fa-award"></i>
+            {% else %}<i class="fas fa-star"></i>
+          {% endcase %}
+        </div>
+        <div class="stat-value" data-count="{{ value }}">0</div>
+        {% if labels[forloop.index0] %}
+          <div class="stat-label">{{ labels[forloop.index0] }}</div>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+<style>
+.stats-section {
+  padding: 4rem 0;
+  margin: 3rem 0;
+  border-radius: 8px;
+}
+
+/* .custom-bg background-color is set via inline style in the HTML */
+
+.stats-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.stat-item {
+  text-align: center;
+  flex: 1;
+  min-width: 200px;
+  max-width: 300px;
+  padding: 1.5rem;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.stat-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.stat-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color, #2563eb);
+}
+
+.stat-value {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
+.stat-label {
+  color: #6b7280;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .stats-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .stat-item {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Check if element is in viewport
+  function isInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
+  
+  // Animate counting for a stat element
+  function animateValue(obj, start, end, duration) {
+    let startTimestamp = null;
+    const step = (timestamp) => {
+      if (!startTimestamp) startTimestamp = timestamp;
+      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+      let value = Math.floor(progress * (end - start) + start);
+      
+      // Add thousand separators
+      value = value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+      
+      obj.innerHTML = value;
+      if (progress < 1) {
+        window.requestAnimationFrame(step);
+      }
+    };
+    window.requestAnimationFrame(step);
+  }
+  
+  const statValues = document.querySelectorAll('.stat-value');
+  let animated = false;
+  
+  // Animation trigger on scroll
+  function checkScroll() {
+    if (statValues.length > 0 && !animated && isInViewport(statValues[0])) {
+      animated = true;
+      
+      statValues.forEach(stat => {
+        const target = parseInt(stat.getAttribute('data-count').replace(/\./g, ''));
+        animateValue(stat, 0, target, 2000);
+      });
+      
+      // Remove scroll listener once animation triggered
+      window.removeEventListener('scroll', checkScroll);
+    }
+  }
+  
+  // Initial check and add scroll listener
+  checkScroll();
+  window.addEventListener('scroll', checkScroll);
+});
+</script>

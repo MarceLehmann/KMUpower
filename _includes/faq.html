@@ -1,0 +1,131 @@
+{% comment %}
+Verwendung:
+{% include faq.html 
+  questions="Wie funktioniert Low-Code Entwicklung?, Wie lange dauert ein typisches Projekt?, Was kostet eine Power App?"
+  answers="Low-Code ermöglicht die Entwicklung von Anwendungen mit minimaler manueller Programmierung..., Ein typisches Projekt dauert zwischen 2-8 Wochen..., Die Kosten variieren abhängig von Umfang und Komplexität..."
+  id="service-faq"
+%}
+{% endcomment %}
+
+{% assign questions = include.questions | split: ", " %}
+{% assign answers = include.answers | split: ", " %}
+{% assign accordion_id = include.id | default: "faq-accordion" %}
+
+<div class="faq-container">
+  <div class="faq-accordion" id="{{ accordion_id }}">
+    {% for question in questions %}
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq('{{ accordion_id }}-{{ forloop.index }}')">
+          <span>{{ question }}</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer" id="{{ accordion_id }}-{{ forloop.index }}">
+          <p>{{ answers[forloop.index0] }}</p>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+<style>
+.faq-container {
+  margin: 2rem 0;
+}
+
+.faq-accordion {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background: white;
+}
+
+.faq-item {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+.faq-question {
+  width: 100%;
+  background: white;
+  border: none;
+  padding: 1.25rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #111827;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+  background-color: #f9fafb;
+}
+
+.faq-icon {
+  font-size: 1.5rem;
+  color: var(--primary-color, #2563eb);
+  transition: transform 0.3s ease;
+}
+
+.faq-question.active .faq-icon {
+  transform: rotate(45deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+  background-color: #f9fafb;
+  padding: 0 1.25rem;
+}
+
+.faq-answer.active {
+  max-height: 500px; /* Adjust this value depending on your content */
+  padding: 1.25rem;
+}
+
+.faq-answer p {
+  margin: 0;
+  color: #4b5563;
+}
+</style>
+
+<script>
+function toggleFaq(id) {
+  const answer = document.getElementById(id);
+  const question = answer.previousElementSibling;
+  
+  // Close all other answers
+  const allAnswers = document.querySelectorAll('.faq-answer');
+  const allQuestions = document.querySelectorAll('.faq-question');
+  
+  allAnswers.forEach(item => {
+    if (item.id !== id) {
+      item.classList.remove('active');
+      item.style.maxHeight = '0';
+    }
+  });
+  
+  allQuestions.forEach(item => {
+    if (item !== question) {
+      item.classList.remove('active');
+    }
+  });
+  
+  // Toggle current answer
+  answer.classList.toggle('active');
+  question.classList.toggle('active');
+  
+  if (answer.classList.contains('active')) {
+    answer.style.maxHeight = answer.scrollHeight + 'px';
+  } else {
+    answer.style.maxHeight = '0';
+  }
+}
+</script>
