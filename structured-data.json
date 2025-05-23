@@ -1,0 +1,31 @@
+---
+layout: null
+permalink: /structured-data.json
+---
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "{{ site.title }}",
+  "description": "{{ site.description }}",
+  "url": "{{ site.url }}{{ site.baseurl }}",
+  "logo": "{{ site.url }}{{ site.baseurl }}/assets/images/LOGO_KMUpower.webp",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+41-123-456-789",
+    "contactType": "customer service",
+    "email": "info@kmupower.ch",
+    "availableLanguage": ["German", "English"]
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Musterstrasse 123",
+    "addressLocality": "Zürich",
+    "postalCode": "8000",
+    "addressCountry": "CH"
+  },
+  "sameAs": [
+    "https://www.facebook.com/kmupower",
+    "https://www.linkedin.com/company/kmupower",
+    "https://twitter.com/kmupower"
+  ]
+}

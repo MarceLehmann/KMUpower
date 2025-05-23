@@ -5,25 +5,46 @@
 
 <!-- Additional custom head content -->
 <style>
+  :root {
+    --primary-color: #007bff;
+    --secondary-color: #0056b3;
+    --text-color: #333;
+    --background-color: #f9f9f9;
+    --light-color: #fff;
+    --border-color: #eee;
+  }
+  
   body {
     font-family: 'Poppins', sans-serif;
   }
   
-  .masthead {
-    background-color: white;
-    border-bottom: 1px solid #f2f2f2;
+  .site-header {
+    background-color: var(--light-color);
+    border-bottom: 1px solid var(--border-color);
   }
   
-  .greedy-nav a {
-    color: #333333;
+  .site-nav a {
+    color: var(--text-color);
   }
   
-  .greedy-nav a:hover {
-    color: var(--primary-color, #38c9c3);
+  .site-nav a:hover, .site-nav a.active {
+    color: var(--primary-color);
   }
   
-  .greedy-nav .visible-links a:before {
-    background-color: var(--primary-color, #38c9c3);
+  a {
+    color: var(--primary-color);
+  }
+  
+  a:hover {
+    color: var(--secondary-color);
+  }
+  
+  .btn {
+    background-color: var(--primary-color);
+  }
+  
+  .btn:hover {
+    background-color: var(--secondary-color);
   }
 </style>
 

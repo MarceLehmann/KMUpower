@@ -9,11 +9,11 @@ Verwendung:
 %}
 {% endcomment %}
 
-<section class="contact-form-section">
+<section class="contact-form-section" aria-labelledby="contact-form-title">
   {% if include.title or include.subtitle %}
     <header class="contact-form-header">
       {% if include.title %}
-        <h2 class="contact-form-title">{{ include.title }}</h2>
+        <h2 class="contact-form-title" id="contact-form-title">{{ include.title }}</h2>
       {% endif %}
       
       {% if include.subtitle %}
@@ -22,16 +22,19 @@ Verwendung:
     </header>
   {% endif %}
   
-  <form class="contact-form" action="{{ include.form_action }}" method="POST">
+  <form class="contact-form" action="{{ include.form_action }}" method="POST" aria-describedby="form-required-description">
+    <p id="form-required-description" class="sr-only">Felder mit einem Stern (*) sind Pflichtfelder.</p>
+    
     <div class="form-row">
       <div class="form-group">
-        <label for="name">Name *</label>
-        <input type="text" id="name" name="name" required>
+        <label for="name">Name <span aria-hidden="true">*</span><span class="sr-only">(Pflichtfeld)</span></label>
+        <input type="text" id="name" name="name" required aria-required="true">
+        <div class="error-message" aria-live="polite"></div>
       </div>
-      
-      <div class="form-group">
-        <label for="email">E-Mail *</label>
-        <input type="email" id="email" name="email" required>
+        <div class="form-group">
+        <label for="email">E-Mail <span aria-hidden="true">*</span><span class="sr-only">(Pflichtfeld)</span></label>
+        <input type="email" id="email" name="email" required aria-required="true">
+        <div class="error-message" aria-live="polite"></div>
       </div>
     </div>
     
@@ -41,18 +44,21 @@ Verwendung:
     </div>
     
     <div class="form-group">
-      <label for="subject">Betreff *</label>
-      <input type="text" id="subject" name="subject" required>
+      <label for="subject">Betreff <span aria-hidden="true">*</span><span class="sr-only">(Pflichtfeld)</span></label>
+      <input type="text" id="subject" name="subject" required aria-required="true">
+      <div class="error-message" aria-live="polite"></div>
     </div>
     
     <div class="form-group">
-      <label for="message">Nachricht *</label>
-      <textarea id="message" name="message" rows="5" required></textarea>
+      <label for="message">Nachricht <span aria-hidden="true">*</span><span class="sr-only">(Pflichtfeld)</span></label>
+      <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
+      <div class="error-message" aria-live="polite"></div>
     </div>
     
     <div class="form-group form-consent">
-      <input type="checkbox" id="consent" name="consent" required>
-      <label for="consent">Ich stimme zu, dass meine Angaben zur Kontaktaufnahme und für Rückfragen gespeichert werden. Die <a href="/privacy/">Datenschutzerklärung</a> habe ich gelesen. *</label>
+      <input type="checkbox" id="consent" name="consent" required aria-required="true">
+      <label for="consent">Ich stimme zu, dass meine Angaben zur Kontaktaufnahme und für Rückfragen gespeichert werden. Die <a href="/privacy/">Datenschutzerklärung</a> habe ich gelesen. <span aria-hidden="true">*</span><span class="sr-only">(Pflichtfeld)</span></label>
+      <div class="error-message" aria-live="polite"></div>
     </div>
     
     <div class="form-group">
@@ -61,7 +67,7 @@ Verwendung:
       </button>
     </div>
     
-    <div class="form-success" style="display: none;">
+    <div class="form-success" style="display: none;" role="alert">
       {{ include.success_message | default: "Vielen Dank für Ihre Nachricht. Wir melden uns in Kürze bei Ihnen." }}
     </div>
   </form>
@@ -142,13 +148,27 @@ textarea {
 input[type="text"]:focus,
 input[type="email"]:focus,
 textarea:focus {
-  border-color: var(--primary-color, #38c9c3);
-  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+  border-color: var(--primary-color, #007bff);
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
   outline: none;
 }
 
+/* Accessibility: form validation styling */
+input:invalid:focus,
+textarea:invalid:focus {
+  border-color: #dc3545;
+  box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.2);
+}
+
+.error-message {
+  color: #dc3545;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  min-height: 1.25rem;
+}
+
 .form-submit {
-  background-color: var(--primary-color, #38c9c3);
+  background-color: var(--primary-color, #007bff);
   color: white;
   border: none;
   border-radius: 6px;
@@ -159,19 +179,35 @@ textarea:focus {
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.form-submit:hover {
-  background-color: var(--secondary-color, #2aa19c);
+.form-submit:hover, 
+.form-submit:focus {
+  background-color: var(--secondary-color, #0056b3);
   transform: translateY(-2px);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.3);
 }
 
 .form-success {
-  background-color: #ecfdf5;
-  color: #065f46;
+  background-color: #d4edda;
+  color: #155724;
   padding: 1rem;
   border-radius: 6px;
-  border-left: 4px solid #10b981;
+  border-left: 4px solid #28a745;
   margin-top: 1rem;
   font-weight: 500;
+}
+
+/* Accessibility: screen reader only */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 @media (max-width: 768px) {
@@ -184,31 +220,91 @@ textarea:focus {
     padding: 1.5rem;
   }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .form-submit, 
+  input, 
+  textarea {
+    transition: none;
+  }
+  
+  .form-submit:hover {
+    transform: none;
+  }
+}
 </style>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   const form = document.querySelector('.contact-form');
   const successMessage = document.querySelector('.form-success');
+  const inputs = form.querySelectorAll('input, textarea');
   
   if (form) {
+    // Add form validation feedback
+    inputs.forEach(input => {
+      input.addEventListener('invalid', function(e) {
+        e.preventDefault();
+        showError(input);
+      });
+      
+      input.addEventListener('input', function() {
+        clearError(input);
+      });
+    });
+    
     form.addEventListener('submit', function(e) {
       // Skip for demo purposes
       // In production, you'd only do this if the form action is not set
       if (!form.getAttribute('action') || form.getAttribute('action') === '#') {
         e.preventDefault();
         
-        // Hide form and show success message
-        form.querySelectorAll('input, textarea, button').forEach(el => {
-          el.disabled = true;
+        // Validate form
+        let isValid = true;
+        inputs.forEach(input => {
+          if (input.hasAttribute('required') && !input.value.trim()) {
+            isValid = false;
+            showError(input);
+          }
         });
         
-        successMessage.style.display = 'block';
-        
-        // Scroll to success message
-        successMessage.scrollIntoView({ behavior: 'smooth' });
+        if (isValid) {
+          // Hide form and show success message
+          form.querySelectorAll('input, textarea, button').forEach(el => {
+            el.disabled = true;
+          });
+          
+          successMessage.style.display = 'block';
+          
+          // Scroll to success message
+          successMessage.scrollIntoView({ behavior: 'smooth' });
+          
+          // Set focus on success message for screen readers
+          successMessage.setAttribute('tabindex', '-1');
+          successMessage.focus();
+        }
       }
     });
+  }
+  
+  function showError(input) {
+    const errorContainer = input.nextElementSibling;
+    if (errorContainer && errorContainer.classList.contains('error-message')) {
+      if (input.type === 'checkbox') {
+        errorContainer.textContent = 'Bitte bestätigen Sie dieses Feld.';
+      } else {
+        errorContainer.textContent = 'Dieses Feld ist erforderlich.';
+      }
+    }
+    input.setAttribute('aria-invalid', 'true');
+  }
+  
+  function clearError(input) {
+    const errorContainer = input.nextElementSibling;
+    if (errorContainer && errorContainer.classList.contains('error-message')) {
+      errorContainer.textContent = '';
+    }
+    input.removeAttribute('aria-invalid');
   }
 });
 </script>

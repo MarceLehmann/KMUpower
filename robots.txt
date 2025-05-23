@@ -1,7 +1,6 @@
-# User-agent: *
 # Allow all crawlers access to all content
 User-agent: *
 Allow: /
 
-# Sitemap location (ensure this path is correct after deployment)
+# Sitemap location
 Sitemap: {{ site.url }}{{ site.baseurl }}/sitemap.xml

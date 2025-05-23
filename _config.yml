@@ -1,71 +1,38 @@
 title: KMUpower
-email: info@kmupower.ch
-description: "Wir ermächtigen KMUs durch digitale Exzellenz."
-url: "https://marcelehmann.github.io"
-baseurl: "/KMUpower"
-logo: "/assets/images/LOGO_KMUpower.webp"
-masthead_title: " "  # Leeren, um nur Logo zu zeigen
+description: Ihre professionelle Webseite von KMUpower.
+author: Marcel Lehmann # Oder der Name des Autors/Unternehmens
 
-# IMPORTANT: Ensure that these plugins are installed for the theme to work properly
+# Die baseurl und url sind wichtig für korrekte Links, besonders auf GitHub Pages.
+# Wenn Ihre Seite unter https://<BENUTZERNAME>.github.io/<REPOSITORY-NAME>/ gehostet wird:
+# baseurl: "/<REPOSITORY-NAME>" # z.B. /KMUpower
+# url: "https://<BENUTZERNAME>.github.io"
+# Wenn es eine benutzerdefinierte Domain ist oder eine User/Orga-Seite (https://<BENUTZERNAME>.github.io/):
+baseurl: "/KMUpower" # Leer lassen, wenn im Root-Verzeichnis der Domain
+url: "https://marcelehmann.github.io" # Vollständige URL Ihrer Seite, z.B. https://www.kmupower.ch
+
+# Build settings
+markdown: kramdown
+permalink: pretty # Für saubere URLs
+
 plugins:
-  - jekyll-seo-tag
-  - jekyll-include-cache
-  - jekyll-remote-theme
+  - jekyll-feed    # Für einen RSS-Feed
+  - jekyll-seo-tag # Für automatische SEO-Meta-Tags
 
-# Theme configuration
-remote_theme: "mmistakes/minimal-mistakes"
-minimal_mistakes_skin: "default"
-
-# Specify the main stylesheet explicitly
-sass:
-  sass_dir: assets/css
-  style: compressed
-
-lang: de
-author:
-  name: Marcel Lehmann
-  avatar: "/assets/images/avatar.jpg"
-  bio: "Gründer & CEO | Microsoft MVP | Digitalisierungsexperte für KMU im DACH-Raum"
-
-# Default settings
-defaults:
-  # _pages
-  - scope:
-      path: ""
-      type: pages
-    values:
-      layout: single
-      author_profile: false
-      classes: wide
-
-# Site footer
-footer:
-  links:
-    - label: "LinkedIn"
-      icon: "fab fa-fw fa-linkedin"
-      url: "https://linkedin.com/"
-    - label: "YouTube"
-      icon: "fab fa-fw fa-youtube"
-      url: "https://youtube.com/"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
-
-# Collections (for easier content management)
-collections:
-  services:
-    output: true
-    permalink: /:collection/:path/
-  posts:
-    output: false
-
+# Standardwerte für Seiten und Beiträge (optional)
 defaults:
   - scope:
-      path: ""
-      type: "pages"
+      path: "" # alle Dateien
     values:
-      layout: single
-      author_profile: false
-      show_date: false
-      seo:
-        type: website
+      layout: "default"
+
+# Dateien/Ordner, die vom Build ausgeschlossen werden sollen
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md
+  - LICENSE

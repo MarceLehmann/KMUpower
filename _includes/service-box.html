@@ -10,12 +10,12 @@ Verwendung:
 %}
 {% endcomment %}
 
-<section class="service-box" aria-labelledby="service-title-{{ include.title | slugify }}">
+<article class="service-box" aria-labelledby="service-title-{{ include.title | slugify }}">
   <div class="service-box-inner">
-    <div class="service-box-front">
+    <div class="service-box-front" tabindex="0">
       {% if include.image %}
         <figure class="service-box-image" style="background-image: url('{{ include.image | relative_url }}')">
-          <div class="service-box-overlay"></div>
+          <div class="service-box-overlay" aria-hidden="true"></div>
           <h3 class="service-box-title" id="service-title-{{ include.title | slugify }}">{{ include.title }}</h3>
         </figure>
       {% else %}
@@ -28,22 +28,21 @@ Verwendung:
             {% when "integration" %}<i class="fas fa-plug" aria-hidden="true"></i>
             {% when "support" %}<i class="fas fa-life-ring" aria-hidden="true"></i>
             {% else %}<i class="fas fa-check-circle" aria-hidden="true"></i>
-          {% endcase %}
-          <figcaption class="service-box-title" id="service-title-{{ include.title | slugify }}">{{ include.title }}</figcaption>
+          {% endcase %}          <figcaption class="service-box-title" id="service-title-{{ include.title | slugify }}">{{ include.title }}</figcaption>
         </figure>
       {% endif %}
     </div>
-    <div class="service-box-back">
+    <div class="service-box-back" tabindex="0">
       <h3 class="service-box-title">{{ include.title }}</h3>
       <p class="service-box-description">{{ include.description }}</p>
       {% if include.button_text and include.button_url %}
-        <a href="{{ include.button_url | relative_url }}" class="service-box-button">
+        <a href="{{ include.button_url | relative_url }}" class="service-box-button" aria-label="{{ include.button_text }} für {{ include.title }}">
           {{ include.button_text }}
         </a>
       {% endif %}
     </div>
   </div>
-</section>
+</article>
 
 <style>
 .service-box {
@@ -63,7 +62,8 @@ Verwendung:
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.service-box:hover .service-box-inner {
+.service-box:hover .service-box-inner, 
+.service-box:focus-within .service-box-inner {
   transform: rotateY(180deg);
 }
 
@@ -74,6 +74,7 @@ Verwendung:
   backface-visibility: hidden;
   border-radius: 8px;
   overflow: hidden;
+  outline: none;
 }
 
 .service-box-front {
@@ -84,7 +85,7 @@ Verwendung:
 }
 
 .service-box-back {
-  background-color: var(--primary-color, #38c9c3);
+  background-color: var(--primary-color, #007bff);
   color: white;
   transform: rotateY(180deg);
   padding: 2rem;
@@ -102,6 +103,7 @@ Verwendung:
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0;
 }
 
 .service-box-overlay {
@@ -115,11 +117,12 @@ Verwendung:
 
 .service-box-icon {
   padding: 2rem;
+  margin: 0;
 }
 
 .service-box-icon i {
   font-size: 3rem;
-  color: var(--primary-color, #38c9c3);
+  color: var(--primary-color, #007bff);
   margin-bottom: 1rem;
 }
 
@@ -133,7 +136,7 @@ Verwendung:
 
 .service-box-front .service-box-title {
   margin-top: 1rem;
-  color: var(--primary-color, #38c9c3);
+  color: var(--primary-color, #007bff);
 }
 
 .service-box-description {
@@ -143,7 +146,7 @@ Verwendung:
 .service-box-button {
   display: inline-block;
   background-color: white;
-  color: var(--primary-color, #38c9c3);
+  color: var(--primary-color, #007bff);
   padding: 0.5rem 1.5rem;
   border-radius: 4px;
   font-weight: 600;
@@ -152,9 +155,30 @@ Verwendung:
   margin-top: auto;
 }
 
-.service-box-button:hover {
+.service-box-button:hover, 
+.service-box-button:focus {
   background-color: rgba(255, 255, 255, 0.9);
   transform: translateY(-3px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  color: var(--primary-color, #007bff);
+  outline: 2px solid white;
+  outline-offset: 2px;
+}
+
+/* Accessibility - Keyboard Focus */
+.service-box-back:focus,
+.service-box-front:focus {
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .service-box-inner {
+    transition: none;
+  }
+  
+  .service-box-button:hover {
+    transform: none;
+  }
 }
 </style>
