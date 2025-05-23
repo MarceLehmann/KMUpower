@@ -21,7 +21,7 @@ excerpt: "Unsere Mission: Digitale Exzellenz für kleine und mittelständische U
 ## Unser Kernteam
 
 <div class="feature__wrapper">
-  <div class="feature__item">
+  <div class="feature__item--center">
     <div class="archive__item">
       <div class="archive__item-teaser">
         <img src="/assets/images/marcel-lehmann.jpg" alt="Marcel Lehmann" class="align-center">
@@ -34,7 +34,7 @@ excerpt: "Unsere Mission: Digitale Exzellenz für kleine und mittelständische U
     </div>
   </div>
   
-  <div class="feature__item">
+  <div class="feature__item--center">
     <div class="archive__item">
       <div class="archive__item-teaser">
         <img src="/assets/images/team-member2.jpg" alt="Sarah Müller" class="align-center">
@@ -47,7 +47,7 @@ excerpt: "Unsere Mission: Digitale Exzellenz für kleine und mittelständische U
     </div>
   </div>
   
-  <div class="feature__item">
+  <div class="feature__item--center">
     <div class="archive__item">
       <div class="archive__item-teaser">
         <img src="/assets/images/team-member3.jpg" alt="Markus Weber" class="align-center">

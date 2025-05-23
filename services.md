@@ -14,7 +14,7 @@ excerpt: "Maßgeschneiderte Digitalisierungslösungen für kleine und mittelstä
 ---
 
 <div class="feature__wrapper">
-  <div class="feature__item">
+  <div class="feature__item--center">
     <div class="archive__item">
       <div class="archive__item-teaser">
         <i class="fas fa-cogs fa-4x" style="color: #38c9c3;"></i>
@@ -34,7 +34,7 @@ excerpt: "Maßgeschneiderte Digitalisierungslösungen für kleine und mittelstä
       </div>
     </div>
   </div>
-  <div class="feature__item">
+  <div class="feature__item--center">
     <div class="archive__item">
       <div class="archive__item-teaser">
         <i class="fas fa-mobile-alt fa-4x" style="color: #38c9c3;"></i>
@@ -54,7 +54,7 @@ excerpt: "Maßgeschneiderte Digitalisierungslösungen für kleine und mittelstä
       </div>
     </div>
   </div>
-  <div class="feature__item">
+  <div class="feature__item--center">
     <div class="archive__item">
       <div class="archive__item-teaser">
         <i class="fas fa-graduation-cap fa-4x" style="color: #38c9c3;"></i>

@@ -219,6 +219,7 @@ TABLE OF CONTENTS
   margin-bottom: 2em;
   width: 100%;
   gap: 2em; /* Consistent gap between items */
+  align-items: stretch; /* Cards gleich hoch */
 }
 
 /* Spacing for feature wrappers */
