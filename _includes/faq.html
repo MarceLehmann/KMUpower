@@ -15,11 +15,11 @@ Verwendung:
   <div class="faq-accordion" id="{{ accordion_id }}">
     {% for question in questions %}
       <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq('{{ accordion_id }}-{{ forloop.index }}')">
+        <button class="faq-question" onclick="toggleFaq('{{ accordion_id }}-{{ forloop.index }}')" aria-expanded="false" aria-controls="{{ accordion_id }}-answer-{{ forloop.index }}" id="{{ accordion_id }}-question-{{ forloop.index }}">
           <span>{{ question }}</span>
-          <span class="faq-icon">+</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
         </button>
-        <div class="faq-answer" id="{{ accordion_id }}-{{ forloop.index }}">
+        <div class="faq-answer" id="{{ accordion_id }}-answer-{{ forloop.index }}" role="region" aria-labelledby="{{ accordion_id }}-question-{{ forloop.index }}">
           <p>{{ answers[forloop.index0] }}</p>
         </div>
       </div>
@@ -98,34 +98,56 @@ Verwendung:
 
 <script>
 function toggleFaq(id) {
-  const answer = document.getElementById(id);
-  const question = answer.previousElementSibling;
+  // The 'id' passed is the button's onclick target, which is the answer panel's base ID
+  // We need to derive the actual answer panel ID and question button ID from this.
+  const answerPanelId = id.replace("{{ accordion_id }}-", "{{ accordion_id }}-answer-");
+  const questionButtonId = id.replace("{{ accordion_id }}-", "{{ accordion_id }}-question-");
+
+  const answer = document.getElementById(answerPanelId);
+  const question = document.getElementById(questionButtonId);
   
   // Close all other answers
   const allAnswers = document.querySelectorAll('.faq-answer');
   const allQuestions = document.querySelectorAll('.faq-question');
   
   allAnswers.forEach(item => {
-    if (item.id !== id) {
+    if (item.id !== answerPanelId) {
       item.classList.remove('active');
       item.style.maxHeight = '0';
+      // Also update aria-expanded for other buttons
+      const otherQuestionButtonId = item.getAttribute('aria-labelledby');
+      if (otherQuestionButtonId) {
+        const otherQuestionButton = document.getElementById(otherQuestionButtonId);
+        if (otherQuestionButton) {
+          otherQuestionButton.setAttribute('aria-expanded', 'false');
+          // Reset icon for other inactive questions
+          const otherIcon = otherQuestionButton.querySelector('.faq-icon');
+          if (otherIcon) otherIcon.textContent = '+';
+        }
+      }
     }
   });
   
   allQuestions.forEach(item => {
-    if (item !== question) {
+    if (item.id !== questionButtonId) {
       item.classList.remove('active');
+      // item.setAttribute('aria-expanded', 'false'); // Already handled above
     }
   });
   
   // Toggle current answer
   answer.classList.toggle('active');
   question.classList.toggle('active');
+  const isExpanded = answer.classList.contains('active');
+  question.setAttribute('aria-expanded', isExpanded.toString());
+  const icon = question.querySelector('.faq-icon');
   
-  if (answer.classList.contains('active')) {
+  if (isExpanded) {
     answer.style.maxHeight = answer.scrollHeight + 'px';
+    if (icon) icon.textContent = '-'; // Change icon to minus
   } else {
     answer.style.maxHeight = '0';
+    if (icon) icon.textContent = '+'; // Change icon to plus
   }
 }
 </script>

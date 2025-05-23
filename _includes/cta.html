@@ -13,7 +13,7 @@ Verwendung:
 {% assign text_color = include.color | default: "white" %}
 {% assign btn_class = include.button_class | default: "btn--primary btn--large" %}
 
-<div class="cta-block" style="--cta-bg: {{ bg_color }}; --cta-color: {{ text_color }};">
+<section class="cta-block" style="--cta-bg: {{ bg_color }}; --cta-color: {{ text_color }};" aria-label="Call to Action">
   <div class="cta-content">
     <h2 class="cta-title">{{ include.title }}</h2>
     <p class="cta-text">{{ include.text }}</p>
@@ -26,7 +26,7 @@ Verwendung:
       </div>
     {% endif %}
   </div>
-</div>
+</section>
 
 <style>
 .cta-block {

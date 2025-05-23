@@ -11,19 +11,21 @@ Verwendung:
 {% assign titles = include.titles | split: ", " %}
 {% assign descriptions = include.descriptions | split: ", " %}
 
-<div class="timeline">
-  {% for date in dates %}
-    <div class="timeline-item {% cycle 'left', 'right' %}">
-      <div class="timeline-badge">
-        <span class="timeline-date">{{ date }}</span>
-      </div>
-      <div class="timeline-content">
-        <h3 class="timeline-title">{{ titles[forloop.index0] }}</h3>
-        <p class="timeline-description">{{ descriptions[forloop.index0] }}</p>
-      </div>
-    </div>
-  {% endfor %}
-</div>
+<section class="timeline" aria-label="Unternehmensgeschichte">
+  <ol style="list-style: none; margin: 0; padding: 0;">
+    {% for date in dates %}
+      <li class="timeline-item {% cycle 'left', 'right' %}" aria-labelledby="timeline-title-{{ forloop.index }}">
+        <div class="timeline-badge">
+          <span class="timeline-date">{{ date }}</span>
+        </div>
+        <div class="timeline-content">
+          <h3 class="timeline-title" id="timeline-title-{{ forloop.index }}">{{ titles[forloop.index0] }}</h3>
+          <p class="timeline-description">{{ descriptions[forloop.index0] }}</p>
+        </div>
+      </li>
+    {% endfor %}
+  </ol>
+</section>
 
 <style>
 .timeline {

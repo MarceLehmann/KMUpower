@@ -26,9 +26,9 @@ Verwendung:
     </div>
   {% endif %}
   
-  <div class="feature-list-container">
+  <ul class="feature-list-container" role="list">
     {% for feature in feature_list %}
-      <div class="feature-list-item">
+      <li class="feature-list-item" role="listitem">
         <div class="feature-list-icon">
           {% assign icon = icon_list[forloop.index0] | default: "check" %}
           <span class="feature-icon">
@@ -53,9 +53,9 @@ Verwendung:
             <p class="feature-list-item-description">{{ description_list[forloop.index0] }}</p>
           {% endif %}
         </div>
-      </div>
+      </li>
     {% endfor %}
-  </div>
+  </ul>
 </section>
 
 <style>

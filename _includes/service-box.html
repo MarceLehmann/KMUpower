@@ -10,34 +10,32 @@ Verwendung:
 %}
 {% endcomment %}
 
-<div class="service-box">
+<section class="service-box" aria-labelledby="service-title-{{ include.title | slugify }}">
   <div class="service-box-inner">
     <div class="service-box-front">
       {% if include.image %}
-        <div class="service-box-image" style="background-image: url('{{ include.image | relative_url }}')">
+        <figure class="service-box-image" style="background-image: url('{{ include.image | relative_url }}')">
           <div class="service-box-overlay"></div>
-          <h3 class="service-box-title">{{ include.title }}</h3>
-        </div>
+          <h3 class="service-box-title" id="service-title-{{ include.title | slugify }}">{{ include.title }}</h3>
+        </figure>
       {% else %}
-        <div class="service-box-icon">
+        <figure class="service-box-icon">
           {% case include.icon %}
-            {% when "automation" %}<i class="fas fa-cogs"></i>
-            {% when "apps" %}<i class="fas fa-mobile-alt"></i>
-            {% when "training" %}<i class="fas fa-graduation-cap"></i>
-            {% when "consulting" %}<i class="fas fa-comments"></i>
-            {% when "integration" %}<i class="fas fa-plug"></i>
-            {% when "support" %}<i class="fas fa-life-ring"></i>
-            {% else %}<i class="fas fa-check-circle"></i>
+            {% when "automation" %}<i class="fas fa-cogs" aria-hidden="true"></i>
+            {% when "apps" %}<i class="fas fa-mobile-alt" aria-hidden="true"></i>
+            {% when "training" %}<i class="fas fa-graduation-cap" aria-hidden="true"></i>
+            {% when "consulting" %}<i class="fas fa-comments" aria-hidden="true"></i>
+            {% when "integration" %}<i class="fas fa-plug" aria-hidden="true"></i>
+            {% when "support" %}<i class="fas fa-life-ring" aria-hidden="true"></i>
+            {% else %}<i class="fas fa-check-circle" aria-hidden="true"></i>
           {% endcase %}
-          <h3 class="service-box-title">{{ include.title }}</h3>
-        </div>
+          <figcaption class="service-box-title" id="service-title-{{ include.title | slugify }}">{{ include.title }}</figcaption>
+        </figure>
       {% endif %}
     </div>
-    
     <div class="service-box-back">
       <h3 class="service-box-title">{{ include.title }}</h3>
       <p class="service-box-description">{{ include.description }}</p>
-      
       {% if include.button_text and include.button_url %}
         <a href="{{ include.button_url | relative_url }}" class="service-box-button">
           {{ include.button_text }}
@@ -45,7 +43,7 @@ Verwendung:
       {% endif %}
     </div>
   </div>
-</div>
+</section>
 
 <style>
 .service-box {

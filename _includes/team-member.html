@@ -11,55 +11,37 @@ Verwendung:
 %}
 {% endcomment %}
 
-<div class="team-member">
-  <div class="team-member-image">
+<section class="team-member" aria-labelledby="team-member-{{ include.name | slugify }}">
+  <figure class="team-member-image">
     {% if include.image %}
       <img src="{{ include.image | relative_url }}" alt="{{ include.name }}">
     {% else %}
-      <div class="team-member-placeholder">
-        {{ include.name | slice: 0, 1 }}
-      </div>
+      <div class="team-member-placeholder">{{ include.name | slice: 0, 1 }}</div>
     {% endif %}
-  </div>
-  
+  </figure>
   <div class="team-member-content">
-    <h3 class="team-member-name">{{ include.name }}</h3>
+    <h3 class="team-member-name" id="team-member-{{ include.name | slugify }}">{{ include.name }}</h3>
     {% if include.position %}
       <p class="team-member-position">{{ include.position }}</p>
     {% endif %}
-    
     {% if include.bio %}
-      <div class="team-member-bio">
-        <p>{{ include.bio }}</p>
-      </div>
+      <div class="team-member-bio"><p>{{ include.bio }}</p></div>
     {% endif %}
-    
     {% if include.linkedin or include.twitter or include.xing %}
-      <div class="team-member-social">
+      <ul class="team-member-social" aria-label="Social Links">
         {% if include.linkedin %}
-          <a href="{{ include.linkedin }}" target="_blank" rel="noopener" class="social-icon linkedin">
-            <i class="fab fa-linkedin" aria-hidden="true"></i>
-            <span class="sr-only">LinkedIn</span>
-          </a>
+          <li><a href="{{ include.linkedin }}" target="_blank" rel="noopener" class="social-icon linkedin"><i class="fab fa-linkedin" aria-hidden="true"></i><span class="sr-only">LinkedIn</span></a></li>
         {% endif %}
-        
         {% if include.twitter %}
-          <a href="{{ include.twitter }}" target="_blank" rel="noopener" class="social-icon twitter">
-            <i class="fab fa-twitter" aria-hidden="true"></i>
-            <span class="sr-only">Twitter</span>
-          </a>
+          <li><a href="{{ include.twitter }}" target="_blank" rel="noopener" class="social-icon twitter"><i class="fab fa-twitter" aria-hidden="true"></i><span class="sr-only">Twitter</span></a></li>
         {% endif %}
-        
         {% if include.xing %}
-          <a href="{{ include.xing }}" target="_blank" rel="noopener" class="social-icon xing">
-            <i class="fab fa-xing" aria-hidden="true"></i>
-            <span class="sr-only">Xing</span>
-          </a>
+          <li><a href="{{ include.xing }}" target="_blank" rel="noopener" class="social-icon xing"><i class="fab fa-xing" aria-hidden="true"></i><span class="sr-only">Xing</span></a></li>
         {% endif %}
-      </div>
+      </ul>
     {% endif %}
   </div>
-</div>
+</section>
 
 <style>
 .team-member {

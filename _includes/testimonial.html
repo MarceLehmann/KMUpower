@@ -9,33 +9,29 @@ Verwendung:
 %}
 {% endcomment %}
 
-<div class="testimonial">
-  <div class="testimonial-content">
-    <div class="testimonial-quote">
-      <i class="fas fa-quote-left" aria-hidden="true"></i>
-      <p>{{ include.quote }}</p>
-      <i class="fas fa-quote-right" aria-hidden="true"></i>
-    </div>
-    
-    <div class="testimonial-author">
-      {% if include.image %}
-        <div class="testimonial-image">
-          <img src="{{ include.image | relative_url }}" alt="{{ include.name }}">
-        </div>
-      {% endif %}
-      
-      <div class="testimonial-info">
-        <h4 class="testimonial-name">{{ include.name }}</h4>
-        {% if include.position %}
-          <p class="testimonial-position">{{ include.position }}{% if include.company %}, {% endif %}</p>
-        {% endif %}
-        {% if include.company %}
-          <p class="testimonial-company">{{ include.company }}</p>
-        {% endif %}
+<figure class="testimonial">
+  <blockquote class="testimonial-quote">
+    <i class="fas fa-quote-left" aria-hidden="true"></i>
+    <p>{{ include.quote }}</p>
+    <i class="fas fa-quote-right" aria-hidden="true"></i>
+  </blockquote>
+  <figcaption class="testimonial-author">
+    {% if include.image %}
+      <div class="testimonial-image">
+        <img src="{{ include.image | relative_url }}" alt="{{ include.name }}">
       </div>
+    {% endif %}
+    <div class="testimonial-info">
+      <span class="testimonial-name">{{ include.name }}</span>
+      {% if include.position %}
+        <span class="testimonial-position">{{ include.position }}{% if include.company %}, {% endif %}</span>
+      {% endif %}
+      {% if include.company %}
+        <span class="testimonial-company">{{ include.company }}</span>
+      {% endif %}
     </div>
-  </div>
-</div>
+  </figcaption>
+</figure>
 
 <style>
 .testimonial {

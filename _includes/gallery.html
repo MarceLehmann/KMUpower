@@ -11,25 +11,30 @@ Verwendung:
 {% assign captions = include.captions | split: ", " %}
 {% assign layout = include.layout | default: "grid" %}
 
-<div class="gallery gallery--{{ layout }}">
-  {% for image in image_paths %}
-    <div class="gallery-item">
-      <a href="{{ image | relative_url }}" class="gallery-link" data-lightbox="gallery" {% if captions[forloop.index0] %}data-title="{{ captions[forloop.index0] }}"{% endif %}>
-        <img src="{{ image | relative_url }}" alt="{{ captions[forloop.index0] | default: 'Gallery image' }}" class="gallery-image">
-        <div class="gallery-overlay">
-          <div class="gallery-overlay-content">
-            <span class="gallery-icon">
-              <i class="fas fa-search-plus"></i>
-            </span>
-            {% if captions[forloop.index0] %}
-              <span class="gallery-caption">{{ captions[forloop.index0] }}</span>
-            {% endif %}
-          </div>
-        </div>
-      </a>
-    </div>
-  {% endfor %}
-</div>
+<section class="gallery gallery--{{ layout }}" aria-label="Galerie">
+  <ul style="list-style: none; margin: 0; padding: 0;">
+    {% for image in image_paths %}
+      <li class="gallery-item">
+        <figure>
+          <a href="{{ image | relative_url }}" class="gallery-link" data-lightbox="gallery" {% if captions[forloop.index0] %}data-title="{{ captions[forloop.index0] }}"{% endif %}>
+            <img src="{{ image | relative_url }}" alt="{{ captions[forloop.index0] | default: 'Gallery image' }}" class="gallery-image" loading="lazy">
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-content">
+                <span class="gallery-icon"><i class="fas fa-search-plus"></i></span>
+                {% if captions[forloop.index0] %}
+                  <span class="gallery-caption">{{ captions[forloop.index0] }}</span>
+                {% endif %}
+              </div>
+            </div>
+          </a>
+          {% if captions[forloop.index0] %}
+            <figcaption class="gallery-caption">{{ captions[forloop.index0] }}</figcaption>
+          {% endif %}
+        </figure>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
 
 <style>
 .gallery {
