@@ -3,8 +3,8 @@ title: "Unsere Services für KMUs"
 layout: splash
 permalink: /services/
 header:
-  overlay_color: "#1e40af"
-  overlay_filter: "0.5"
+  overlay_color: "#38c9c3"
+  overlay_filter: "0.3"
   overlay_image: /assets/images/services-hero.jpg
   actions:
     - label: "Kontakt aufnehmen"

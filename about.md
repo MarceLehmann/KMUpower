@@ -4,8 +4,8 @@ description: "Erfahren Sie mehr über das Kernteam, unsere Mission und Werte."
 permalink: /about/
 layout: single
 header:
-  overlay_color: "#2563eb"
-  overlay_filter: "0.7"
+  overlay_color: "#38c9c3"
+  overlay_filter: "0.3"
   overlay_image: /assets/images/team-preview.jpg
 ---
 

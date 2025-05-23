@@ -4,8 +4,8 @@ description: "Wir ermächtigen KMUs durch digitale Exzellenz: Low-Code-Workflows
 permalink: /
 layout: splash
 header:
-  overlay_color: "#2563eb"
-  overlay_filter: "0.5"
+  overlay_color: "#38c9c3"
+  overlay_filter: "0.3"
   overlay_image: /assets/images/hero-digital.jpg
   actions:
     - label: "Kontakt aufnehmen"
@@ -64,9 +64,8 @@ feature_row:
 
 <div class="feature__wrapper">
   <div class="feature__item--center">
-    <div class="archive__item">
-      <div class="archive__item-teaser">
-        <i class="fas fa-bolt fa-3x" style="color: #2563eb;"></i>
+    <div class="archive__item">      <div class="archive__item-teaser">
+        <i class="fas fa-bolt fa-3x" style="color: #38c9c3;"></i>
       </div>
       <div class="archive__item-body">
         <h2 class="archive__item-title">30% Effizienzsteigerung</h2>
@@ -78,9 +77,8 @@ feature_row:
   </div>
   
   <div class="feature__item--center">
-    <div class="archive__item">
-      <div class="archive__item-teaser">
-        <i class="fas fa-users fa-3x" style="color: #2563eb;"></i>
+    <div class="archive__item">      <div class="archive__item-teaser">
+        <i class="fas fa-users fa-3x" style="color: #38c9c3;"></i>
       </div>
       <div class="archive__item-body">
         <h2 class="archive__item-title">Zufriedene Kunden</h2>
