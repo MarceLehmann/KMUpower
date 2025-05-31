@@ -23,7 +23,7 @@ subtitle                 : "Digitale Transformation, Webentwicklung & Beratung f
 description              : "KMUpower ist Ihr Partner für Digitalisierung, Webentwicklung und Automatisierung für kleine und mittlere Unternehmen in der Schweiz."
 keywords                 : [KMUpower, Digitalisierung, KMU, Webentwicklung, Beratung, Automatisierung, Schweiz]
 url                      : "https://kmupower.ch"
-baseurl                  : ""
+baseurl                  : "/KMUpower"
 repository               : "thepoweraddicts/KMUpower"
 logo                     : "/assets/images/logo.png"
 masthead_title           : "KMUpower"
