@@ -1,17 +1,14 @@
 # main links
 main:
   - title: "Home"
-    url: /
+    url: "/"
   - title: "Leistungen"
-    url: /leistungen/
+    url: "/leistungen/"
   - title: "Über uns"
-    url: /ueber-uns/
+    url: "/ueber-uns/"
   - title: "Kontakt"
-    url: /kontakt/
-
-# Footer navigation
-footer:
+    url: "/kontakt/"
   - title: "Impressum"
-    url: /impressum/
+    url: "/impressum/"
   - title: "Datenschutz"
-    url: /datenschutz/
+    url: "/datenschutz/"

@@ -1,6 +1,6 @@
 ---
 layout: splash
-title: "Digitale Lösungen für Ihr KMU"
+title: "Digitale Lösungen für Ihr KMU – KMUpower Schweiz"
 header:
   overlay_color: "#38c9c3"
   overlay_filter: "0.6"
@@ -9,76 +9,29 @@ header:
     - label: "Kostenloses Beratungsgespräch"
       url: "/kontakt/"
       class: "btn--primary btn--large"
-excerpt: "Wir bringen Ihr kleines oder mittleres Unternehmen erfolgreich in die digitale Zukunft. Mit maßgeschneiderten Lösungen, die wirklich funktionieren."
-
-intro: 
-  - excerpt: 'KMUpower ist Ihr Partner für die digitale Transformation. Wir verstehen die besonderen Herausforderungen von KMU und entwickeln Lösungen, die zu Ihrem Budget und Ihren Zielen passen.'
-
-feature_row:
-  - image_path: assets/images/digital-beratung.jpg
-    alt: "Digitale Beratung"
-    title: "Digitale Beratung"
-    excerpt: "Strategische Beratung für Ihre digitale Transformation. Wir analysieren Ihre Prozesse und zeigen Ihnen den optimalen Weg in die Zukunft."
-    url: "/leistungen/beratung/"
-    btn_label: "Mehr erfahren"
-    btn_class: "btn--primary"
-  - image_path: assets/images/web-entwicklung.jpg
-    alt: "Web-Entwicklung"
-    title: "Web-Entwicklung"
-    excerpt: "Moderne, responsive Websites und Webanwendungen, die Ihre Kunden begeistern und Ihr Geschäft vorantreiben."
-    url: "/leistungen/webentwicklung/"
-    btn_label: "Mehr erfahren"
-    btn_class: "btn--primary"
-  - image_path: assets/images/automatisierung.jpg
-    alt: "Prozess-Automatisierung"
-    title: "Prozess-Automatisierung"
-    excerpt: "Automatisieren Sie wiederkehrende Aufgaben und sparen Sie wertvolle Zeit und Ressourcen für Ihr Kerngeschäft."
-    url: "/leistungen/automatisierung/"
-    btn_label: "Mehr erfahren"
-    btn_class: "btn--primary"
-
-feature_row2:
-  - image_path: /assets/images/kmu-success.jpg
-    alt: "KMU Erfolgsgeschichte"
-    title: "Warum KMU uns vertrauen"
-    excerpt: 'Über **150 erfolgreiche Projekte** mit kleinen und mittleren Unternehmen in der Schweiz. Wir sprechen Ihre Sprache und verstehen Ihre Herausforderungen.<br><br>
-    ✓ Transparente Preise ohne versteckte Kosten<br>
-    ✓ Persönliche Betreuung vom ersten Gespräch bis zur Umsetzung<br>
-    ✓ Schnelle Umsetzung und messbare Ergebnisse<br>
-    ✓ Support und Wartung aus einer Hand'
-    url: "/ueber-uns/"
-    btn_label: "Unsere Erfolgsgeschichten"
-    btn_class: "btn--primary"
-
-feature_row3:
-  - image_path: /assets/images/beratung-termin.jpg
-    alt: "Kostenloses Beratungsgespräch"
-    title: "Bereit für den nächsten Schritt?"
-    excerpt: 'Vereinbaren Sie noch heute ein **kostenloses Beratungsgespräch** und erfahren Sie, wie wir Ihr Unternehmen digitalisieren können.<br><br>
-    📞 **+41 123 456 789**<br>
-    ✉️ **info@kmupower.ch**<br><br>
-    *Innerhalb von 24 Stunden erhalten Sie eine Antwort von unserem Expertenteam.*'
-    url: "/kontakt/"
-    btn_label: "Jetzt Termin vereinbaren"
-    btn_class: "btn--success btn--large"
+excerpt: "KMUpower ist Ihr Partner für Digitalisierung, Webentwicklung und Automatisierung für kleine und mittlere Unternehmen in der Schweiz."
+seo:
+  title: "KMUpower – Digitale Lösungen für KMU in der Schweiz"
+  description: "Digitale Transformation, Webentwicklung, Beratung und Automatisierung für KMU. Jetzt kostenloses Beratungsgespräch sichern."
+  keywords: [KMUpower, Digitalisierung, KMU, Webentwicklung, Beratung, Automatisierung, Schweiz]
 ---
 
 {% include feature_row id="intro" type="center" %}
 
-<div style="background-color: #f8fffe; padding: 50px 0;" class="section-light">
+<section class="section-light" aria-label="Leistungen für KMU">
   <div class="wrapper">
-    <h2 style="text-align: center; margin-bottom: 40px; color: #2c3e50;">Unsere Leistungen für Ihr KMU</h2>
+    <h2 class="text-center" style="color:#2c3e50;">Unsere Leistungen für Ihr KMU</h2>
     {% include feature_row %}
   </div>
-</div>
+</section>
 
 {% include feature_row id="feature_row2" type="left" %}
 
-<div style="background-color: #e8fffe; padding: 50px 0;" class="cta-section">
+<section class="cta-section" aria-label="Beratung vereinbaren">
   {% include feature_row id="feature_row3" type="right" %}
-</div>
+</section>
 
-<div class="stats-section">
+<section class="stats-section" aria-label="Erfolgszahlen KMUpower">
   <div class="wrapper">
     <h3>Vertrauen Sie auf unsere Expertise</h3>
     <div class="stats-container">
@@ -100,5 +53,9 @@ feature_row3:
       </div>
     </div>
   </div>
-</div>
----
+</section>
+
+<section class="section-spacing-small text-center">
+  <a href="/leistungen/" class="btn btn--primary btn--large" style="margin:1em;">Alle Leistungen entdecken</a>
+  <a href="/ueber-uns/" class="btn btn--primary btn--large" style="margin:1em;">Über uns</a>
+</section>
