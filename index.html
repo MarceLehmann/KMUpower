@@ -5,6 +5,7 @@ header:
   overlay_color: "#38c9c3"
   overlay_filter: "0.6"
   overlay_image: {{ site.baseurl }}/assets/images/hero-bg.jpg
+  overlay_alt: "Moderne Büroumgebung mit Fokus auf digitale Zusammenarbeit bei KMUpower" # Added alt text for header
   actions:
     - label: "Kostenloses Beratungsgespräch"
       url: "{{ site.baseurl }}/kontakt/"
@@ -14,6 +15,52 @@ seo:
   title: "KMUpower – Digitale Lösungen für KMU in der Schweiz"
   description: "Digitale Transformation, Webentwicklung, Beratung und Automatisierung für KMU. Jetzt kostenloses Beratungsgespräch sichern."
   keywords: [KMUpower, Digitalisierung, KMU, Webentwicklung, Beratung, Automatisierung, Schweiz]
+
+# Feature Row Definitions
+feature_row:
+  - image_path: {{ site.baseurl }}/assets/images/service-beratung.jpg
+    alt: "KMUpower Team bei einer strategischen Digitalisierungsberatung"
+    title: "Strategische Beratung"
+    excerpt: "Wir analysieren Ihre aktuellen Prozesse und entwickeln eine massgeschneiderte Digitalisierungsstrategie für Ihr KMU."
+    url: "{{ site.baseurl }}/leistungen/beratung/"
+    btn_label: "Mehr erfahren"
+    btn_class: "btn--primary"
+  - image_path: {{ site.baseurl }}/assets/images/service-webentwicklung.jpg
+    alt: "Modernes Webdesign auf einem Laptop-Bildschirm, entwickelt von KMUpower"
+    title: "Webentwicklung & Design"
+    excerpt: "Von responsiven Websites bis zu komplexen Webanwendungen – wir schaffen Ihren digitalen Auftritt."
+    url: "{{ site.baseurl }}/leistungen/webentwicklung/"
+    btn_label: "Mehr erfahren"
+    btn_class: "btn--primary"
+  - image_path: {{ site.baseurl }}/assets/images/service-automatisierung.jpg
+    alt: "Zahnräder als Symbol für Prozessautomatisierung durch KMUpower"
+    title: "Prozessautomatisierung"
+    excerpt: "Optimieren Sie Ihre Arbeitsabläufe und steigern Sie die Effizienz durch intelligente Automatisierungslösungen."
+    url: "{{ site.baseurl }}/leistungen/#automatisierung" # Assuming an anchor link
+    btn_label: "Mehr erfahren"
+    btn_class: "btn--primary"
+
+intro:
+  - title: "Ihr Partner für den digitalen Wandel"
+    excerpt: "KMUpower begleitet kleine und mittlere Unternehmen in der Schweiz auf dem Weg in die digitale Zukunft. Wir verstehen die Herausforderungen von KMU und bieten praxisnahe, effektive Lösungen, die Ihr Unternehmen voranbringen. Von der ersten Idee bis zur erfolgreichen Umsetzung – wir sind an Ihrer Seite."
+    image_path: {{ site.baseurl }}/assets/images/intro-digital-wandel.jpg
+    alt: "Symbolbild für digitalen Wandel: Eine Hand hält ein Tablet mit Wachstumsgrafiken"
+
+feature_row2:
+  - image_path: {{ site.baseurl }}/assets/images/warum-kmupower.jpg
+    alt: "Zwei KMUpower Mitarbeiter im Gespräch über ein Projekt"
+    title: "Warum KMUpower wählen?"
+    excerpt: "**Massgeschneiderte Lösungen:** Keine Standardpakete, sondern individuelle Konzepte, die genau zu Ihrem Unternehmen passen.<br/>**Erfahrung & Expertise:** Profitieren Sie von unserem breiten Know-how in verschiedenen Branchen.<br/>**Nachhaltiger Erfolg:** Wir setzen auf langfristige Partnerschaften und messbare Ergebnisse.<br/>**Transparente Kommunikation:** Wir halten Sie stets auf dem Laufenden und erklären komplexe Sachverhalte verständlich."
+    url: "{{ site.baseurl }}/ueber-uns/"
+    btn_label: "Lernen Sie uns kennen"
+    btn_class: "btn--success"
+
+feature_row3:
+  - title: "Bereit für den nächsten Schritt?"
+    excerpt: "Lassen Sie uns gemeinsam herausfinden, wie KMUpower Ihr Unternehmen digital transformieren kann. Vereinbaren Sie noch heute Ihr kostenloses und unverbindliches Erstgespräch."
+    url: "{{ site.baseurl }}/kontakt/"
+    btn_label: "Jetzt Kontakt aufnehmen"
+    btn_class: "btn--primary btn--large"
 ---
 
 {% include feature_row id="intro" type="center" %}
@@ -56,6 +103,6 @@ seo:
 </section>
 
 <section class="section-spacing-small text-center">
-  <a href="/leistungen/" class="btn btn--primary btn--large" style="margin:1em;">Alle Leistungen entdecken</a>
-  <a href="/ueber-uns/" class="btn btn--primary btn--large" style="margin:1em;">Über uns</a>
+  <a href="{{ site.baseurl }}/leistungen/" class="btn btn--primary btn--large" style="margin:1em;">Alle Leistungen entdecken</a>
+  <a href="{{ site.baseurl }}/ueber-uns/" class="btn btn--primary btn--large" style="margin:1em;">Über uns</a>
 </section>

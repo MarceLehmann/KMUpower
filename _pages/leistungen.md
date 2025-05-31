@@ -6,6 +6,7 @@ header:
   overlay_color: "#38c9c3"
   overlay_filter: "0.6"
   overlay_image: {{ site.baseurl }}/assets/images/services-header.jpg
+  overlay_alt: "Übersicht der KMUpower Dienstleistungen für digitale Transformation"
 excerpt: "Maßgeschneiderte digitale Lösungen für Ihr KMU – von der Beratung bis zur Umsetzung."
 seo:
   title: "Leistungen – Digitalisierung, Webentwicklung, Automatisierung für KMU"

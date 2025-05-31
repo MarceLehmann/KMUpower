@@ -16,20 +16,27 @@ gallery:
     alt: "placeholder image 3"
     title: "Image 3 title caption"
 feature_row:
-  - image_path: /assets/images/unsplash-gallery-image-1-th.jpg
+  - image_path: {{ site.baseurl }}/assets/images/unsplash-gallery-image-1-th.jpg
     alt: "placeholder image 1"
-    title: "Placeholder 1"
-    excerpt: "This is some sample content that goes here with **Markdown** formatting."
-  - image_path: /assets/images/unsplash-gallery-image-2-th.jpg
+    title: "Normal"
+  - image_path: {{ site.baseurl }}/assets/images/unsplash-gallery-image-2-th.jpg
     alt: "placeholder image 2"
-    title: "Placeholder 2"
-    excerpt: "This is some sample content that goes here with **Markdown** formatting."
-    url: "#test-link"
-    btn_label: "Read More"
-    btn_class: "btn--inverse"
-  - image_path: /assets/images/unsplash-gallery-image-3-th.jpg
-    title: "Placeholder 3"
-    excerpt: "This is some sample content that goes here with **Markdown** formatting."
+    title: "Left Aligned"
+    text_align: left
+  - image_path: {{ site.baseurl }}/assets/images/unsplash-gallery-image-3-th.jpg
+    alt: "placeholder image 3"
+    title: "Right Aligned"
+    text_align: right
+feature_row2:
+  - image_path: {{ site.baseurl }}/assets/images/unsplash-gallery-image-1-th.jpg
+    alt: "placeholder image 1"
+    title: "Normal"
+  - image_path: {{ site.baseurl }}/assets/images/unsplash-gallery-image-2-th.jpg
+    alt: "placeholder image 2"
+    title: "Normal"
+  - image_path: {{ site.baseurl }}/assets/images/unsplash-gallery-image-3-th.jpg
+    alt: "placeholder image 3"
+    title: "Normal"
 last_modified_at: 2020-05-01T10:22:56-04:00
 toc: true
 toc_label: "Helpers"

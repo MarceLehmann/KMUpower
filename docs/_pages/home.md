@@ -4,7 +4,8 @@ permalink: /
 hidden: true
 header:
   overlay_color: "#5e616c"
-  overlay_image: /assets/images/mm-home-page-feature.jpg
+  overlay_image: {{ site.baseurl }}/assets/images/mm-home-page-feature.jpg
+  overlay_filter: 0.5 # same as adding an opacity of 0.5 to a black background
   actions:
     - label: "<i class='fas fa-download'></i> Install now"
       url: "/docs/quick-start-guide/"

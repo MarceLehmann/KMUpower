@@ -79,3 +79,26 @@ This is a sample gallery using the `gallery` helper.
 ```
 {% endraw %}
 This is a sample gallery with `caption` and `half` class using the `gallery` helper.
+
+### Images Right Aligned
+
+<a href="{{ site.baseurl }}/assets/images/image-filename-1-large.jpg"><img src="{{ site.baseurl }}/assets/images/image-filename-1.jpg"></a>
+<a href="{{ site.baseurl }}/assets/images/image-filename-2-large.jpg"><img src="{{ site.baseurl }}/assets/images/image-filename-2.jpg"></a>
+
+### Images Left Aligned
+
+<a href="{{ site.baseurl }}/assets/images/image-filename-1-large.jpg"><img src="{{ site.baseurl }}/assets/images/image-filename-1.jpg"></a>
+<a href="{{ site.baseurl }}/assets/images/image-filename-2-large.jpg"><img src="{{ site.baseurl }}/assets/images/image-filename-2.jpg"></a>
+
+### Images Center Aligned
+
+<img src="{{ site.baseurl }}/images/image-filename-1.jpg">
+<img src="{{ site.baseurl }}/images/image-filename-2.jpg">
+<img src="{{ site.baseurl }}/images/image-filename-3.jpg">
+
+### Figure Tag
+
+<a href="{{ site.baseurl }}/assets/images/image-filename-1-large.jpg"><img src="{{ site.baseurl }}/assets/images/image-filename-1.jpg"></a>
+<a href="{{ site.baseurl }}/assets/images/image-filename-2-large.jpg"><img src="{{ site.baseurl }}/assets/images/image-filename-2.jpg"></a>
+<img src="{{ site.baseurl }}/assets/images/image-filename-3.jpg">
+<img src="{{ site.baseurl }}/assets/images/image-filename-4.jpg">

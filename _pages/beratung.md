@@ -6,6 +6,7 @@ header:
   overlay_color: "#38c9c3"
   overlay_filter: "0.7"
   overlay_image: {{ site.baseurl }}/assets/images/beratung-header.jpg
+  overlay_alt: "Team bei einer Besprechung zur digitalen Strategieberatung für KMU"
   caption: "Professionelle Digitalisierungsberatung für KMU"
 sidebar:
   nav: "main"

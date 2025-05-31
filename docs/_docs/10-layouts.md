@@ -530,7 +530,7 @@ Or if you want to do more fancy things, go all the way to [linear-gradient][mdn-
 excerpt: "This post should [...]"
 header:
   overlay_image: /assets/images/unsplash-image-1.jpg
-  overlay_filter: linear-gradient(rgba(255, 0, 0, 0.5), rgba(0, 255, 255, 0.5))
+  overlay_filter: linear-gradient(rgba(255, 0, 0, 0.5), rgba(0, 0, 255, 0.5))
   caption: "Photo credit: [**Unsplash**](https://unsplash.com)"
   actions:
     - label: "Download"

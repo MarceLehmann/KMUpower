@@ -6,6 +6,7 @@ header:
   overlay_color: "#38c9c3"
   overlay_filter: "0.6"
   overlay_image: "{{ site.baseurl }}/assets/images/contact-header.jpg" # Corrected path
+  overlay_alt: "Kontaktseite Headerbild: Büro-Szene mit Telefon und Notizblock" # Added
 sidebar:
   nav: "main"
 seo:

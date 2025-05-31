@@ -6,6 +6,7 @@ header:
   overlay_color: "#38c9c3"
   overlay_filter: "0.7"
   overlay_image: {{ site.baseurl }}/assets/images/webdev-header.jpg
+  overlay_alt: "Moderner Laptop zeigt eine von KMUpower entwickelte Webseite"
   caption: "Moderne Websites für erfolgreiches Online-Business"
 sidebar:
   nav: "main"

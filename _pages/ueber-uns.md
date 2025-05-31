@@ -6,6 +6,7 @@ header:
   overlay_color: "#38c9c3"
   overlay_filter: "0.6"
   overlay_image: {{ site.baseurl }}/assets/images/team-header.jpg
+  overlay_alt: "Das KMUpower Team in einer kollaborativen Arbeitsumgebung"
 sidebar:
   nav: "main"
 seo:
