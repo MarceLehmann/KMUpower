@@ -5,7 +5,7 @@ layout: single
 header:
   overlay_color: "#38c9c3"
   overlay_filter: "0.7"
-  overlay_image: /assets/images/webdev-header.jpg
+  overlay_image: {{ site.baseurl }}/assets/images/webdev-header.jpg
   caption: "Moderne Websites für erfolgreiches Online-Business"
 sidebar:
   nav: "main"
@@ -19,6 +19,20 @@ seo:
 ---
 
 # Website & Web-Anwendungen
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "provider": {
+    "@type": "Organization",
+    "name": "KMUpower GmbH",
+    "url": "https://kmupower.ch{{ site.baseurl }}/leistungen/webentwicklung/"
+  },
+  "serviceType": "Webentwicklung, E-Commerce, Kundenportale, Webanwendungen",
+  "areaServed": "CH"
+}
+</script>
 
 Eine moderne Website ist heute das digitale Aushängeschild Ihres Unternehmens. Wir entwickeln responsive, benutzerfreundliche und suchmaschinenoptimierte Websites, die Ihre Kunden begeistern.
 
@@ -194,4 +208,4 @@ Ja, wir bieten Swiss Hosting oder vermitteln passende Hosting-Partner.
   <p><a href="/kontakt/" class="btn btn--success btn--large" aria-label="Jetzt Website-Projekt starten">Jetzt Website-Projekt starten</a></p>
 </div>
 
-[Zurück zu Leistungen](/leistungen/) | [Kontakt](/kontakt/)
+[Zurück zu Leistungen]({{ site.baseurl }}/leistungen/) | [Kontakt]({{ site.baseurl }}/kontakt/) | [Über uns]({{ site.baseurl }}/ueber-uns/)

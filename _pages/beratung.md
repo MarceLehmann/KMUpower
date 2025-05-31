@@ -5,7 +5,7 @@ layout: single
 header:
   overlay_color: "#38c9c3"
   overlay_filter: "0.7"
-  overlay_image: /assets/images/beratung-header.jpg
+  overlay_image: {{ site.baseurl }}/assets/images/beratung-header.jpg
   caption: "Professionelle Digitalisierungsberatung für KMU"
 sidebar:
   nav: "main"
@@ -19,6 +19,20 @@ seo:
 ---
 
 # Digitale Beratung & Strategie
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "provider": {
+    "@type": "Organization",
+    "name": "KMUpower GmbH",
+    "url": "https://kmupower.ch{{ site.baseurl }}/leistungen/beratung/"
+  },
+  "serviceType": "Digitalisierungsberatung, Strategie, Prozessoptimierung",
+  "areaServed": "CH"
+}
+</script>
 
 In der heutigen Geschäftswelt ist Digitalisierung kein Luxus mehr, sondern eine Notwendigkeit. Wir helfen Ihrem KMU dabei, die richtige digitale Strategie zu entwickeln und erfolgreich umzusetzen.
 
@@ -140,4 +154,4 @@ Ja, das 60-minütige Erstgespräch ist für Sie völlig kostenfrei und unverbind
   <p><a href="/kontakt/" class="btn btn--success btn--large" aria-label="Jetzt kostenloses Gespräch vereinbaren">Jetzt kostenloses Gespräch vereinbaren</a></p>
 </div>
 
-[Zurück zu Leistungen](/leistungen/) | [Kontakt](/kontakt/)
+[Zurück zu Leistungen]({{ site.baseurl }}/leistungen/) | [Kontakt]({{ site.baseurl }}/kontakt/) | [Über uns]({{ site.baseurl }}/ueber-uns/)

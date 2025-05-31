@@ -10,6 +10,29 @@ seo:
 
 # Datenschutzerklärung
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "KMUpower GmbH",
+  "url": "https://kmupower.ch{{ site.baseurl }}/datenschutz/",
+  "logo": "{{ site.baseurl }}/assets/images/logo.png",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Musterstrasse 123",
+    "addressLocality": "Zürich",
+    "postalCode": "8000",
+    "addressCountry": "CH"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+41 123 456 789",
+    "contactType": "customer service",
+    "email": "datenschutz@kmupower.ch"
+  }
+}
+</script>
+
 ## 1. Allgemeine Hinweise
 
 Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Diese Website hält sich an die Bestimmungen der Datenschutz-Grundverordnung (DSGVO) und des Schweizer Datenschutzgesetzes.
@@ -57,4 +80,4 @@ E-Mail: <a href="mailto:datenschutz@kmupower.ch">datenschutz@kmupower.ch</a>
 ---
 *Stand: Mai 2025*
 
-[Zurück zur Startseite](/) | [Impressum](/impressum/) | [Kontakt](/kontakt/)
+[Zurück zur Startseite]({{ site.baseurl }}/) | [Impressum]({{ site.baseurl }}/impressum/) | [Kontakt]({{ site.baseurl }}/kontakt/)

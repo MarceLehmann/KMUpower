@@ -10,6 +10,29 @@ seo:
 
 # Impressum
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "KMUpower GmbH",
+  "url": "https://kmupower.ch{{ site.baseurl }}/impressum/",
+  "logo": "{{ site.baseurl }}/assets/images/logo.png",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Musterstrasse 123",
+    "addressLocality": "Zürich",
+    "postalCode": "8000",
+    "addressCountry": "CH"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+41 123 456 789",
+    "contactType": "customer service",
+    "email": "info@kmupower.ch"
+  }
+}
+</script>
+
 **KMUpower GmbH**  
 Musterstrasse 123  
 8000 Zürich  
@@ -33,9 +56,9 @@ Die Inhalte unserer Seiten wurden mit grösster Sorgfalt erstellt. Für die Rich
 Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem Schweizer Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung ausserhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.
 
 ## Datenschutz
-Eine Nutzung der Internetseiten von KMUpower ist grundsätzlich ohne jede Angabe personenbezogener Daten möglich. Weitere Informationen finden Sie in unserer [Datenschutzerklärung](/datenschutz/).
+Eine Nutzung der Internetseiten von KMUpower ist grundsätzlich ohne jede Angabe personenbezogener Daten möglich. Weitere Informationen finden Sie in unserer [Datenschutzerklärung]({{ site.baseurl }}/datenschutz/).
 
 ---
 *Stand: Mai 2025*
 
-[Zurück zur Startseite](/) | [Kontakt](/kontakt/)
+[Zurück zur Startseite]({{ site.baseurl }}/) | [Kontakt]({{ site.baseurl }}/kontakt/)

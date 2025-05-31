@@ -5,7 +5,7 @@ layout: single
 header:
   overlay_color: "#38c9c3"
   overlay_filter: "0.6"
-  overlay_image: /assets/images/team-header.jpg
+  overlay_image: {{ site.baseurl }}/assets/images/team-header.jpg
 sidebar:
   nav: "main"
 seo:
@@ -19,8 +19,8 @@ seo:
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "KMUpower GmbH",
-  "url": "https://kmupower.ch/ueber-uns/",
-  "logo": "https://kmupower.ch/assets/images/logo.png",
+  "url": "https://kmupower.ch{{ site.baseurl }}/ueber-uns/",
+  "logo": "{{ site.baseurl }}/assets/images/logo.png",
   "description": "KMUpower ist Ihr Partner für digitale Transformation und Webentwicklung für KMU in der Schweiz.",
   "address": {
     "@type": "PostalAddress",
@@ -102,7 +102,7 @@ KMUpower wurde 2014 gegründet, um <strong>KMU</strong> bei der digitalen Transf
 
 > Von der einfachen Website bis zur komplexen Geschäftsanwendung – wir haben KMU aus verschiedenen Branchen geholfen, ihre Ziele zu erreichen.
 
-[Unsere Leistungen entdecken](/leistungen/) &nbsp;|&nbsp; [Kontaktieren Sie uns für ein kostenloses Beratungsgespräch](/kontakt/)
+[Unsere Leistungen entdecken]({{ site.baseurl }}/leistungen/) &nbsp;|&nbsp; [Kontaktieren Sie uns für ein kostenloses Beratungsgespräch]({{ site.baseurl }}/kontakt/)
 
 ---
 
@@ -111,3 +111,5 @@ KMUpower wurde 2014 gegründet, um <strong>KMU</strong> bei der digitalen Transf
   <p>Vereinbaren Sie jetzt ein <strong>kostenloses Beratungsgespräch</strong> mit unseren Experten.</p>
   <a href="/kontakt/" class="btn btn--primary btn--large">Jetzt Termin vereinbaren</a>
 </div>
+
+[Zurück zur Startseite]({{ site.baseurl }}/) | [Leistungen]({{ site.baseurl }}/leistungen/) | [Kontakt]({{ site.baseurl }}/kontakt/)
