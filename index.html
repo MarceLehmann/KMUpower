@@ -1,4 +1,104 @@
 ---
-layout: home
-author_profile: true
+layout: splash
+title: "Digitale Lösungen für Ihr KMU"
+header:
+  overlay_color: "#000"
+  overlay_filter: "0.5"
+  overlay_image: /assets/images/hero-bg.jpg
+  actions:
+    - label: "Kostenloses Beratungsgespräch"
+      url: "/kontakt/"
+      class: "btn--primary btn--large"
+excerpt: "Wir bringen Ihr kleines oder mittleres Unternehmen erfolgreich in die digitale Zukunft. Mit maßgeschneiderten Lösungen, die wirklich funktionieren."
+
+intro: 
+  - excerpt: 'KMUpower ist Ihr Partner für die digitale Transformation. Wir verstehen die besonderen Herausforderungen von KMU und entwickeln Lösungen, die zu Ihrem Budget und Ihren Zielen passen.'
+
+feature_row:
+  - image_path: assets/images/digital-beratung.jpg
+    alt: "Digitale Beratung"
+    title: "Digitale Beratung"
+    excerpt: "Strategische Beratung für Ihre digitale Transformation. Wir analysieren Ihre Prozesse und zeigen Ihnen den optimalen Weg in die Zukunft."
+    url: "/leistungen/beratung/"
+    btn_label: "Mehr erfahren"
+    btn_class: "btn--primary"
+  - image_path: assets/images/web-entwicklung.jpg
+    alt: "Web-Entwicklung"
+    title: "Web-Entwicklung"
+    excerpt: "Moderne, responsive Websites und Webanwendungen, die Ihre Kunden begeistern und Ihr Geschäft vorantreiben."
+    url: "/leistungen/webentwicklung/"
+    btn_label: "Mehr erfahren"
+    btn_class: "btn--primary"
+  - image_path: assets/images/automatisierung.jpg
+    alt: "Prozess-Automatisierung"
+    title: "Prozess-Automatisierung"
+    excerpt: "Automatisieren Sie wiederkehrende Aufgaben und sparen Sie wertvolle Zeit und Ressourcen für Ihr Kerngeschäft."
+    url: "/leistungen/automatisierung/"
+    btn_label: "Mehr erfahren"
+    btn_class: "btn--primary"
+
+feature_row2:
+  - image_path: /assets/images/kmu-success.jpg
+    alt: "KMU Erfolgsgeschichte"
+    title: "Warum KMU uns vertrauen"
+    excerpt: 'Über **150 erfolgreiche Projekte** mit kleinen und mittleren Unternehmen in der Schweiz. Wir sprechen Ihre Sprache und verstehen Ihre Herausforderungen.<br><br>
+    ✓ Transparente Preise ohne versteckte Kosten<br>
+    ✓ Persönliche Betreuung vom ersten Gespräch bis zur Umsetzung<br>
+    ✓ Schnelle Umsetzung und messbare Ergebnisse<br>
+    ✓ Support und Wartung aus einer Hand'
+    url: "/ueber-uns/"
+    btn_label: "Unsere Erfolgsgeschichten"
+    btn_class: "btn--primary"
+
+feature_row3:
+  - image_path: /assets/images/beratung-termin.jpg
+    alt: "Kostenloses Beratungsgespräch"
+    title: "Bereit für den nächsten Schritt?"
+    excerpt: 'Vereinbaren Sie noch heute ein **kostenloses Beratungsgespräch** und erfahren Sie, wie wir Ihr Unternehmen digitalisieren können.<br><br>
+    📞 **+41 123 456 789**<br>
+    ✉️ **info@kmupower.ch**<br><br>
+    *Innerhalb von 24 Stunden erhalten Sie eine Antwort von unserem Expertenteam.*'
+    url: "/kontakt/"
+    btn_label: "Jetzt Termin vereinbaren"
+    btn_class: "btn--success btn--large"
+---
+
+{% include feature_row id="intro" type="center" %}
+
+<div style="background-color: #f8f9fa; padding: 50px 0;">
+  <div class="wrapper">
+    <h2 style="text-align: center; margin-bottom: 40px;">Unsere Leistungen für Ihr KMU</h2>
+    {% include feature_row %}
+  </div>
+</div>
+
+{% include feature_row id="feature_row2" type="left" %}
+
+<div style="background-color: #e8f4fd; padding: 50px 0;">
+  {% include feature_row id="feature_row3" type="right" %}
+</div>
+
+<div style="background-color: #2c3e50; color: white; padding: 40px 0; text-align: center;">
+  <div class="wrapper">
+    <h3>Vertrauen Sie auf unsere Expertise</h3>
+    <div style="display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap; margin-top: 30px;">
+      <div style="margin: 10px;">
+        <h4 style="color: #3498db; font-size: 2.5em; margin: 0;">150+</h4>
+        <p>Erfolgreich abgeschlossene Projekte</p>
+      </div>
+      <div style="margin: 10px;">
+        <h4 style="color: #3498db; font-size: 2.5em; margin: 0;">98%</h4>
+        <p>Kundenzufriedenheit</p>
+      </div>
+      <div style="margin: 10px;">
+        <h4 style="color: #3498db; font-size: 2.5em; margin: 0;">10+</h4>
+        <p>Jahre Erfahrung</p>
+      </div>
+      <div style="margin: 10px;">
+        <h4 style="color: #3498db; font-size: 2.5em; margin: 0;">24h</h4>
+        <p>Support-Reaktionszeit</p>
+      </div>
+    </div>
+  </div>
+</div>
 ---

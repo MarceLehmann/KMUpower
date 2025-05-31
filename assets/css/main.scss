@@ -7,3 +7,141 @@ search: false
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
+
+/* Custom styling for KMUpower business website */
+.btn--primary {
+  background-color: #3498db;
+  border-color: #3498db;
+}
+
+.btn--primary:hover {
+  background-color: #2980b9;
+  border-color: #2980b9;
+}
+
+.btn--success {
+  background-color: #27ae60;
+  border-color: #27ae60;
+}
+
+.btn--success:hover {
+  background-color: #219a52;
+  border-color: #219a52;
+}
+
+/* Professional typography */
+.page__title {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.page__lead {
+  font-size: 1.2em;
+  line-height: 1.6;
+}
+
+/* Feature row enhancements */
+.feature__item {
+  margin-bottom: 2em;
+}
+
+/* Business stats styling */
+.business-stats {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 2em 0;
+}
+
+.business-stats .stat-item {
+  text-align: center;
+  margin: 1em;
+}
+
+.business-stats .stat-number {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #3498db;
+  margin: 0;
+}
+
+.business-stats .stat-label {
+  margin: 0.5em 0 0 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .business-stats {
+    flex-direction: column;
+  }
+}
+
+/* Custom styling for KMUpower business website */
+.btn--primary {
+  background-color: #3498db;
+  border-color: #3498db;
+}
+
+.btn--primary:hover {
+  background-color: #2980b9;
+  border-color: #2980b9;
+}
+
+.btn--success {
+  background-color: #27ae60;
+  border-color: #27ae60;
+}
+
+.btn--success:hover {
+  background-color: #219a52;
+  border-color: #219a52;
+}
+
+/* Professional typography */
+.page__title {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.page__lead {
+  font-size: 1.2em;
+  line-height: 1.6;
+}
+
+/* Feature row enhancements */
+.feature__item {
+  margin-bottom: 2em;
+}
+
+/* Business stats styling */
+.business-stats {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 2em 0;
+}
+
+.business-stats .stat-item {
+  text-align: center;
+  margin: 1em;
+}
+
+.business-stats .stat-number {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #3498db;
+  margin: 0;
+}
+
+.business-stats .stat-label {
+  margin: 0.5em 0 0 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .business-stats {
+    flex-direction: column;
+  }
+}
