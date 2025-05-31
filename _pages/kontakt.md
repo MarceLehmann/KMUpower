@@ -5,7 +5,7 @@ layout: single
 header:
   overlay_color: "#38c9c3"
   overlay_filter: "0.6"
-  overlay_image: /assets/images/contact-header.jpg
+  overlay_image: "{{ site.baseurl }}/assets/images/contact-header.jpg" # Corrected path
 sidebar:
   nav: "main"
 seo:

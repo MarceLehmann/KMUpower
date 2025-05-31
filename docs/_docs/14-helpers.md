@@ -66,9 +66,9 @@ Will output the following:
 {% include figure popup=true image_path="/assets/images/unsplash-image-10.jpg" alt="this is a placeholder image" caption="This is a figure caption." %}
 
 ```html
-<figure>
-  <a href="/assets/images/unsplash-image-10.jpg" class="image-popup" title="This is a figure caption.">
-    <img src="/assets/images/unsplash-image-10.jpg" alt="this is a placeholder image">
+<figure class="third">
+  <a href="{{ site.baseurl }}/assets/images/unsplash-image-10.jpg" class="image-popup" title="This is a figure caption.">
+    <img src="{{ site.baseurl }}/assets/images/unsplash-image-10.jpg" alt="this is a placeholder image">
   </a>
   <figcaption>This is a figure caption.</figcaption>
 </figure>

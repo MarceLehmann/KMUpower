@@ -63,3 +63,19 @@ And you'll get something that looks like this:
 	<img src="http://placehold.it/600x300.jpg">
 	<figcaption>Three images.</figcaption>
 </figure>
+
+This is a sample gallery using the `gallery` helper.
+{% raw %}
+```html
+<div class="gallery">
+  <figure>
+    <a href="{{ site.baseurl }}/assets/images/image-filename-1-large.jpg"><img src="{{ site.baseurl }}/assets/images/image-filename-1.jpg"></a>
+    <a href="{{ site.baseurl }}/assets/images/image-filename-2-large.jpg"><img src="{{ site.baseurl }}/assets/images/image-filename-2.jpg"></a>
+    <img src="{{ site.baseurl }}/assets/images/image-filename-3.jpg">
+    <img src="{{ site.baseurl }}/assets/images/image-filename-4.jpg">
+    <figcaption>gallery caption</figcaption>
+  </figure>
+</div>
+```
+{% endraw %}
+This is a sample gallery with `caption` and `half` class using the `gallery` helper.
