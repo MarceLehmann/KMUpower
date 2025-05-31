@@ -13,9 +13,11 @@ seo:
   keywords: [KMUpower, Leistungen, Digitalisierung, Webentwicklung, Automatisierung, Beratung, Support, Schweiz]
 ---
 
+# Unsere Leistungen für KMU
+
 <section class="section-light" aria-label="Kernleistungen für KMU">
   <div class="wrapper">
-    <h1 class="text-center">Unsere Kernleistungen für Ihr KMU</h1>
+    <h2 class="text-center">Unsere Kernleistungen</h2>
     {% include feature_row id="feature_row1" %}
   </div>
 </section>
@@ -45,9 +47,11 @@ seo:
 <div class="cta-section">
   <h2>Bereit für Ihr Digitalprojekt?</h2>
   <p>Jetzt kostenloses Beratungsgespräch vereinbaren und unverbindlich starten.</p>
-  <a href="/kontakt/" class="btn btn--primary btn--large">Jetzt Termin vereinbaren</a>
+  <a href="/kontakt/" class="btn btn--primary btn--large" aria-label="Jetzt Termin vereinbaren">Jetzt Termin vereinbaren</a>
 </div>
 
 ---
 
 **Alle Preise verstehen sich zzgl. MwSt. Individuelle Angebote auf Anfrage.**
+
+[Zurück zur Startseite](/) | [Über uns](/ueber-uns/) | [Kontakt](/kontakt/)

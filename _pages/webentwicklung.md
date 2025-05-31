@@ -1,6 +1,6 @@
 ---
 permalink: /leistungen/webentwicklung/
-title: "Website & Web-Anwendungen"
+title: "Website & Web-Anwendungen – KMUpower Schweiz"
 layout: single
 header:
   overlay_color: "#38c9c3"
@@ -12,43 +12,47 @@ sidebar:
 toc: true
 toc_label: "Web-Services"
 toc_icon: "globe"
+seo:
+  title: "Website & Web-Anwendungen – KMUpower Schweiz"
+  description: "Webentwicklung, E-Commerce, Kundenportale und individuelle Webanwendungen für KMU in der Schweiz."
+  keywords: [KMUpower, Webentwicklung, Website, E-Commerce, Kundenportal, Webanwendung, Schweiz]
 ---
 
-## Ihre professionelle Online-Präsenz
+# Website & Web-Anwendungen
 
 Eine moderne Website ist heute das digitale Aushängeschild Ihres Unternehmens. Wir entwickeln responsive, benutzerfreundliche und suchmaschinenoptimierte Websites, die Ihre Kunden begeistern.
 
-### Unsere Web-Entwicklungsleistungen
+## Unsere Web-Entwicklungsleistungen
 
-#### 🌐 Corporate Websites
+### 🌐 Corporate Websites
 - **Professionelle Unternehmenswebsites**
 - Responsive Design für alle Geräte
 - SEO-optimiert für bessere Sichtbarkeit
 - Content-Management-System (CMS)
 - Mehrsprachige Websites
 
-#### 🛒 E-Commerce Lösungen
+### 🛒 E-Commerce Lösungen
 - **Online-Shops für jeden Bedarf**
 - WooCommerce, Shopify, oder Individual-Entwicklung
 - Payment-Integration (Stripe, PayPal, etc.)
 - Lagerverwaltung und Versandlogistik
 - Mobile-optimierte Checkout-Prozesse
 
-#### 👥 Kundenportale
+### 👥 Kundenportale
 - **Sichere Bereiche für Ihre Kunden**
 - Benutzerregistrierung und -verwaltung
 - Dokumenten-Download
 - Support-Ticket-System
 - Dashboard und Reporting
 
-#### ⚙️ Web-Anwendungen
+### ⚙️ Web-Anwendungen
 - **Maßgeschneiderte Online-Tools**
 - Datenbank-gestützte Anwendungen
 - API-Entwicklung und -Integration
 - Progressive Web Apps (PWA)
 - Cloud-basierte Lösungen
 
-### Technologien & Standards
+## Technologien & Standards
 
 <div class="notice--primary">
 <h4>Modernste Technologien</h4>
@@ -72,7 +76,7 @@ Eine moderne Website ist heute das digitale Aushängeschild Ihres Unternehmens. 
 - Drupal, Joomla
 - Headless CMS (Strapi, Contentful)
 
-### Preisübersicht Website-Entwicklung
+## Preisübersicht Website-Entwicklung
 
 | Website-Typ | Preis ab | Leistungen |
 |-------------|----------|------------|
@@ -85,70 +89,70 @@ Eine moderne Website ist heute das digitale Aushängeschild Ihres Unternehmens. 
 
 *Alle Preise verstehen sich zzgl. MwSt. Hosting und Domain nicht inbegriffen.*
 
-### Entwicklungsprozess
+## Entwicklungsprozess
 
-#### 1. Analyse & Konzept (1-2 Wochen)
+### 1. Analyse & Konzept (1-2 Wochen)
 - Anforderungsanalyse
 - Zielgruppen-Definition
 - Sitemap und Wireframes
 - Design-Konzept
 
-#### 2. Design & Prototyping (1-2 Wochen)
+### 2. Design & Prototyping (1-2 Wochen)
 - UI/UX Design
 - Responsive Layouts
 - Interaktiver Prototyp
 - Design-Freigabe
 
-#### 3. Entwicklung (2-6 Wochen)
+### 3. Entwicklung (2-6 Wochen)
 - Frontend-Entwicklung
 - Backend-Programmierung
 - CMS-Integration
 - Funktions-Testing
 
-#### 4. Testing & Launch (1 Woche)
+### 4. Testing & Launch (1 Woche)
 - Cross-Browser Testing
 - Mobile Testing
 - Performance-Optimierung
 - Go-Live und Schulung
 
-### Erfolgsgeschichten
+## Erfolgsgeschichten
 
-#### 🏢 Schweizer Beratungsunternehmen
+### 🏢 Schweizer Beratungsunternehmen
 **Projekt**: Neue Corporate Website mit Kundenportal  
 **Ergebnis**: 250% mehr Anfragen, 40% kürzere Vertriebszyklen  
 **Technologie**: WordPress Custom Theme, Kundenportal
 
-#### 🛍️ Mode-Boutique
+### 🛍️ Mode-Boutique
 **Projekt**: E-Commerce Shop mit 200+ Produkten  
 **Ergebnis**: 180% Umsatzsteigerung im ersten Jahr  
 **Technologie**: WooCommerce, Custom Design
 
-#### ⚕️ Zahnarztpraxis
+### ⚕️ Zahnarztpraxis
 **Projekt**: Website mit Online-Terminbuchung  
 **Ergebnis**: 60% weniger Telefonanrufe, mehr Online-Termine  
 **Technologie**: WordPress mit Booking-Plugin
 
-### Zusatzleistungen
+## Zusatzleistungen
 
-#### 🎨 Webdesign & Branding
+### 🎨 Webdesign & Branding
 - Logo-Design und Corporate Identity
 - Fotografie und Bildbearbeitung
 - Print-Design (Visitenkarten, Flyer)
 - Brand Guidelines
 
-#### 📈 Online-Marketing
+### 📈 Online-Marketing
 - Suchmaschinenoptimierung (SEO)
 - Google Ads Kampagnen
 - Social Media Marketing
 - E-Mail-Marketing Integration
 
-#### 🔧 Wartung & Support
+### 🔧 Wartung & Support
 - Regelmäßige Updates
 - Sicherheits-Monitoring
 - Backup-Service
 - technischer Support
 
-### Warum KMUpower für Ihre Website?
+## Warum KMUpower für Ihre Website?
 
 **✅ KMU-Spezialist**  
 Wir verstehen die Bedürfnisse von kleinen und mittleren Unternehmen.
@@ -165,7 +169,7 @@ Auch nach dem Launch sind wir für Updates und Erweiterungen da.
 **✅ Swiss Made**  
 Entwicklung und Hosting in der Schweiz für höchste Datensicherheit.
 
-### Häufige Fragen
+## Häufige Fragen
 
 **Wie lange dauert die Entwicklung einer Website?**  
 Je nach Umfang zwischen 2-8 Wochen. Landing Pages oft schon in 1-2 Wochen.
@@ -184,8 +188,10 @@ Ja, wir bieten Swiss Hosting oder vermitteln passende Hosting-Partner.
 
 ---
 
-<div class="notice--success">
-<h4>Bereit für Ihre neue Website?</h4>
-<p>Lassen Sie uns gemeinsam Ihre perfekte Online-Präsenz entwickeln. Kostenloses Beratungsgespräch und unverbindliches Angebot.</p>
-<p><a href="/kontakt/" class="btn btn--success btn--large">Jetzt Website-Projekt starten</a></p>
+<div class="cta-section">
+  <h2>Bereit für Ihre neue Website?</h2>
+  <p>Lassen Sie uns gemeinsam Ihre perfekte Online-Präsenz entwickeln. Kostenloses Beratungsgespräch und unverbindliches Angebot.</p>
+  <p><a href="/kontakt/" class="btn btn--success btn--large" aria-label="Jetzt Website-Projekt starten">Jetzt Website-Projekt starten</a></p>
 </div>
+
+[Zurück zu Leistungen](/leistungen/) | [Kontakt](/kontakt/)

@@ -1,6 +1,6 @@
 ---
 permalink: /leistungen/beratung/
-title: "Digitale Beratung & Strategie"
+title: "Digitale Beratung & Strategie – KMUpower Schweiz"
 layout: single
 header:
   overlay_color: "#38c9c3"
@@ -12,39 +12,43 @@ sidebar:
 toc: true
 toc_label: "Beratungsleistungen"
 toc_icon: "cog"
+seo:
+  title: "Digitale Beratung & Strategie – KMUpower Schweiz"
+  description: "Strategische Digitalisierungsberatung für KMU: Analyse, Roadmap, Prozessoptimierung, Technologie-Empfehlung."
+  keywords: [KMUpower, Beratung, Digitalisierung, Strategie, Prozessoptimierung, KMU, Schweiz]
 ---
 
-## Digitale Transformation strategisch angehen
+# Digitale Beratung & Strategie
 
 In der heutigen Geschäftswelt ist Digitalisierung kein Luxus mehr, sondern eine Notwendigkeit. Wir helfen Ihrem KMU dabei, die richtige digitale Strategie zu entwickeln und erfolgreich umzusetzen.
 
-### Unsere Beratungsleistungen
+## Unsere Beratungsleistungen
 
-#### 🔍 IT-Infrastruktur Assessment
+### 🔍 IT-Infrastruktur Assessment
 - **Analyse der aktuellen IT-Landschaft**
 - Bewertung von Hardware, Software und Netzwerk
 - Identifikation von Schwachstellen und Optimierungspotenzialen
 - Sicherheitsüberprüfung und Compliance-Check
 
-#### 📊 Prozessanalyse und Optimierung
+### 📊 Prozessanalyse und Optimierung
 - **Digitalisierung von Geschäftsprozessen**
 - Workflow-Analyse und Effizienzsteigerung
 - Automatisierungspotentiale identifizieren
 - Change Management und Mitarbeiterintegration
 
-#### 🗺️ Digitalisierungsroadmap
+### 🗺️ Digitalisierungsroadmap
 - **Schritt-für-Schritt Plan für Ihre Digitalisierung**
 - Priorisierung von Digitalisierungsprojekten
 - Budget- und Zeitplanung
 - Meilenstein-Definition und Erfolgsmessung
 
-#### 💡 Technologie-Empfehlungen
+### 💡 Technologie-Empfehlungen
 - **Passende Lösungen für Ihr Unternehmen**
 - Software-Evaluierung und Vendor-Vergleiche
 - Cloud vs. On-Premise Entscheidungshilfen
 - Integration bestehender Systeme
 
-### Warum KMUpower für Ihre Digitalisierung?
+## Warum KMUpower für Ihre Digitalisierung?
 
 <div class="notice--info">
 <h4>Speziell für KMU entwickelt</h4>
@@ -63,24 +67,24 @@ Feste Stundensätze und klare Kostenschätzungen ohne versteckte Gebühren.
 **✅ Langfristige Partnerschaft**  
 Wir begleiten Sie auch nach der Beratung bei der Umsetzung.
 
-### Typische Beratungsprojekte
+## Typische Beratungsprojekte
 
-#### Beispiel 1: Produktionsunternehmen (50 Mitarbeiter)
+### Beispiel 1: Produktionsunternehmen (50 Mitarbeiter)
 **Herausforderung**: Manuelle Prozesse, fehlende Digitalisierung  
 **Lösung**: ERP-System Einführung, Workflow-Automatisierung  
 **Ergebnis**: 30% Zeitersparnis, deutlich weniger Fehler
 
-#### Beispiel 2: Dienstleistungsunternehmen (25 Mitarbeiter)
+### Beispiel 2: Dienstleistungsunternehmen (25 Mitarbeiter)
 **Herausforderung**: Ineffiziente Kundenverwaltung, keine Online-Präsenz  
 **Lösung**: CRM-System, neue Website mit Online-Buchung  
 **Ergebnis**: 40% mehr Neukunden, bessere Kundenbindung
 
-#### Beispiel 3: Handelsbetrieb (15 Mitarbeiter)
+### Beispiel 3: Handelsbetrieb (15 Mitarbeiter)
 **Herausforderung**: Veraltete Warenwirtschaft, kein E-Commerce  
 **Lösung**: Moderne Warenwirtschaft, Online-Shop Integration  
 **Ergebnis**: 60% Umsatzsteigerung durch Online-Verkäufe
 
-### Unser Beratungsprozess
+## Unser Beratungsprozess
 
 1. **Kostenfreies Erstgespräch** (60 Min.)
    - Kennenlernen Ihres Unternehmens
@@ -102,7 +106,7 @@ Wir begleiten Sie auch nach der Beratung bei der Umsetzung.
    - Diskussion und Anpassungen
    - Planung der nächsten Schritte
 
-### Preise und Konditionen
+## Preise und Konditionen
 
 | Leistung | Preis | Dauer |
 |----------|-------|-------|
@@ -114,7 +118,7 @@ Wir begleiten Sie auch nach der Beratung bei der Umsetzung.
 
 *Alle Preise verstehen sich zzgl. MwSt. Pauschalpreise auf Anfrage möglich.*
 
-### Häufige Fragen
+## Häufige Fragen
 
 **Wie lange dauert eine typische Beratung?**  
 Je nach Unternehmensgröße und Komplexität zwischen 1-3 Wochen für die Analyse und Strategieentwicklung.
@@ -130,8 +134,10 @@ Ja, das 60-minütige Erstgespräch ist für Sie völlig kostenfrei und unverbind
 
 ---
 
-<div class="notice--success">
-<h4>Bereit für Ihre digitale Transformation?</h4>
-<p>Vereinbaren Sie noch heute Ihr kostenloses Beratungsgespräch und erfahren Sie, welche Digitalisierungspotentiale in Ihrem Unternehmen stecken.</p>
-<p><a href="/kontakt/" class="btn btn--success btn--large">Jetzt kostenloses Gespräch vereinbaren</a></p>
+<div class="cta-section">
+  <h2>Bereit für Ihre digitale Transformation?</h2>
+  <p>Vereinbaren Sie noch heute Ihr kostenloses Beratungsgespräch und erfahren Sie, welche Digitalisierungspotentiale in Ihrem Unternehmen stecken.</p>
+  <p><a href="/kontakt/" class="btn btn--success btn--large" aria-label="Jetzt kostenloses Gespräch vereinbaren">Jetzt kostenloses Gespräch vereinbaren</a></p>
 </div>
+
+[Zurück zu Leistungen](/leistungen/) | [Kontakt](/kontakt/)

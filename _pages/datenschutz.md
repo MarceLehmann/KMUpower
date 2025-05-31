@@ -1,7 +1,11 @@
 ---
 permalink: /datenschutz/
-title: "Datenschutzerklärung"
+title: "Datenschutzerklärung – KMUpower Schweiz"
 layout: single
+seo:
+  title: "Datenschutzerklärung – KMUpower GmbH Schweiz"
+  description: "Datenschutzinformationen der KMUpower GmbH, Zürich, für Website-Besucher und Kunden."
+  keywords: [KMUpower, Datenschutz, DSGVO, Schweiz, Daten, Rechte]
 ---
 
 # Datenschutzerklärung
@@ -48,7 +52,9 @@ Bei Fragen zum Datenschutz wenden Sie sich bitte an:
 Musterstrasse 123  
 8000 Zürich  
 Schweiz  
-E-Mail: datenschutz@kmupower.ch
+E-Mail: <a href="mailto:datenschutz@kmupower.ch">datenschutz@kmupower.ch</a>
 
 ---
 *Stand: Mai 2025*
+
+[Zurück zur Startseite](/) | [Impressum](/impressum/) | [Kontakt](/kontakt/)
