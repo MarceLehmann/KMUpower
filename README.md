@@ -25,5 +25,11 @@ Die Seite ist für GitHub Pages konfiguriert und wird automatisch aus dem `main`
 - `_pages/blog.md`: Blog-Übersicht ("KMU Digitalisierung")
 - `_posts/`: Blogbeiträge
 
+## Blogstruktur und Beitragsformat
+
+- Blogbeiträge befinden sich im Verzeichnis `_posts/` und folgen dem Schema `YYYY-MM-DD-titel.md`.
+- Die Blog-Übersicht ist unter `_pages/blog.md` zu finden.
+- Jeder Beitrag sollte relevante Kategorien und ein Veröffentlichungsdatum im Frontmatter enthalten.
+
 ## Theme
 [Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/)
