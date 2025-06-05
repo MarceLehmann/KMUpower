@@ -22,10 +22,10 @@ title_separator          : "-"
 subtitle                 : "Digitale Transformation, Webentwicklung & Beratung für KMU"
 description              : "KMUpower ist Ihr Partner für Digitalisierung, Webentwicklung und Automatisierung für kleine und mittlere Unternehmen in der Schweiz."
 keywords                 : [KMUpower, Digitalisierung, KMU, Webentwicklung, Beratung, Automatisierung, Schweiz]
-url                      : "https://kmupower.ch"
+url                      : "https://marcelehmann.github.io"
 baseurl                  : "/KMUpower"
 repository               : "thepoweraddicts/KMUpower"
-logo                     : "/assets/images/logo.png"
+logo                     : "{{ site.baseurl }}/assets/images/logo.png"
 masthead_title           : "KMUpower"
 breadcrumbs              : true
 lang                     : de
@@ -154,10 +154,10 @@ footer:
       url: "tel:+41123456789"
     - label: "Impressum"
       icon: "fas fa-fw fa-info-circle"
-      url: "/impressum/"
+      url: "{{ site.baseurl }}/impressum/"
     - label: "Datenschutz"
       icon: "fas fa-fw fa-shield-alt"
-      url: "/datenschutz/"
+      url: "{{ site.baseurl }}/datenschutz/"
 
 
 # Reading Files

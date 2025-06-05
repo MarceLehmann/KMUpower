@@ -1,9 +1,299 @@
-# [Minimal Mistakes Jekyll theme](https://mmistakes.github.io/minimal-mistakes/)
+# KMUpower Jekyll Website
 
-[![LICENSE](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/mmistakes/minimal-mistakes/master/LICENSE)
-[![Jekyll](https://img.shields.io/badge/jekyll-%3E%3D%203.7-blue.svg)](https://jekyllrb.com/)
+> **Digitale Lösungen für KMU in der Schweiz**  
+> Ein professionelles Jekyll-Website-Projekt basierend auf dem Minimal Mistakes Theme.
 
-Minimal Mistakes is a flexible two-column Jekyll theme, perfect for building personal sites, blogs, and portfolios. As the name implies, styling is purposely minimalistic to be enhanced and customized by you :smile:.
+## 📋 Projekt-Übersicht
+
+Diese Website präsentiert KMUpower als Anbieter für Digitalisierung, Webentwicklung und Automatisierung für kleine und mittlere Unternehmen in der Schweiz.
+
+### 🔗 Live-Website
+- **GitHub Pages:** https://marcelehmann.github.io/KMUpower
+- **Repository:** https://github.com/thepoweraddicts/KMUpower
+
+### 🎨 Theme & Design
+- **Theme:** [Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/) (Remote Theme)
+- **Skin:** `mint` (KMUpower Markenfarbe: `#38c9c3`)
+- **Layout:** Responsive, SEO-optimiert, mehrsprachig (Deutsch)
+
+## 🚀 Schnellstart
+
+### Lokale Entwicklung
+
+1. **Repository klonen:**
+   ```bash
+   git clone https://github.com/thepoweraddicts/KMUpower.git
+   cd KMUpower
+   ```
+
+2. **Dependencies installieren:**
+   ```bash
+   bundle install
+   ```
+
+3. **Lokalen Server starten:**
+   ```bash
+   bundle exec jekyll serve
+   ```
+   
+   Die Website ist dann unter `http://localhost:4000/KMUpower` verfügbar.
+
+### GitHub Pages Deployment
+
+Das Deployment erfolgt automatisch über GitHub Actions bei Push auf den `master` Branch.
+
+## 📁 Projektstruktur
+
+```
+KMUpower/
+├── _config.yml              # Hauptkonfiguration
+├── index.html               # Startseite (Splash Layout)
+├── _pages/                  # Statische Seiten
+│   ├── leistungen.md        # Leistungsübersicht
+│   ├── kontakt.md           # Kontaktformular
+│   ├── ueber-uns.md         # Über uns
+│   ├── beratung.md          # Beratungsdetails
+│   ├── webentwicklung.md    # Webentwicklung Details
+│   ├── impressum.md         # Impressum
+│   ├── datenschutz.md       # Datenschutzerklärung
+│   └── 404.md              # 404 Fehlerseite
+├── _includes/               # Wiederverwendbare Komponenten
+│   ├── feature_row          # Feature-Blöcke (modifiziert)
+│   ├── head.html            # Custom Head-Inhalte
+│   └── ...
+├── assets/
+│   ├── css/main.scss        # Custom SCSS mit KMUpower Branding
+│   └── images/              # Website-Bilder
+├── .github/
+│   ├── workflows/
+│   │   └── build.yml        # GitHub Actions Build & Deploy
+│   └── ISSUE_TEMPLATE/      # Issue Templates
+└── _data/
+    └── navigation.yml       # Navigationsmenü
+```
+
+## ⚙️ Konfiguration
+
+### Wichtige _config.yml Einstellungen
+
+```yaml
+# Site Settings
+url: "https://marcelehmann.github.io"
+baseurl: "/KMUpower"
+title: "KMUpower – Digitale Lösungen für KMU in der Schweiz"
+description: "KMUpower ist Ihr Partner für Digitalisierung..."
+
+# Theme
+remote_theme: "mmistakes/minimal-mistakes"
+minimal_mistakes_skin: "mint"
+
+# Plugins
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-feed
+```
+
+### Baseurl Management
+
+**✅ Korrekte Verwendung:**
+- Interne Links: `{{ site.baseurl }}/page/`
+- Asset-Links: `{{ site.baseurl }}/assets/images/file.jpg`
+- CSS/JS: `{{ '/assets/css/main.css' | relative_url }}`
+
+**❌ Häufige Fehler:**
+- Absolute Pfade ohne baseurl: `/page/`
+- Fehlende Liquid-Tags in YAML
+
+## 🎯 SEO & Performance
+
+### Implementierte Features
+
+- ✅ **Jekyll SEO Tag Plugin** für Meta-Tags
+- ✅ **Sitemap Generation** (`jekyll-sitemap`)
+- ✅ **RSS Feed** (`jekyll-feed`)
+- ✅ **Schema.org Markup** für Unternehmensdaten
+- ✅ **Open Graph & Twitter Cards**
+- ✅ **Optimierte Bilder** mit `loading="lazy"`
+- ✅ **SCSS Komprimierung** (`style: compressed`)
+- ✅ **HTML Komprimierung** mit `compress_html`
+
+### SEO Best Practices
+
+Jede Seite enthält strukturierte SEO-Daten:
+
+```yaml
+seo:
+  title: "Spezifischer Seitentitel"
+  description: "Beschreibung (max. 160 Zeichen)"
+  keywords: [relevante, keywords, liste]
+```
+
+## 🔧 Entwicklungs-Workflows
+
+### GitHub Actions
+
+**Build Workflow** (`.github/workflows/build.yml`):
+- Trigger: Push zu `master` Branch
+- Ruby 3.2 Setup mit Bundler-Cache
+- Jekyll Build mit `JEKYLL_ENV=production`
+- Bereit für GitHub Pages Deployment
+
+### Issue Templates
+
+Verfügbare Templates:
+- **Bug Report** (`.github/ISSUE_TEMPLATE/bug_report.yml`)
+- **Documentation** (`.github/ISSUE_TEMPLATE/documentation.yml`)
+- **Config** (`.github/ISSUE_TEMPLATE/config.yml`)
+
+## 🎨 Custom Styling
+
+### KMUpower Branding
+
+Primärfarben definiert in `assets/css/main.scss`:
+
+```scss
+:root {
+  --brand-primary: #38c9c3;
+  --brand-primary-dark: #2ba6a1;
+  --brand-primary-light: #5dd4cf;
+  --brand-primary-pale: #e8fffe;
+}
+```
+
+### Custom Components
+
+**Feature Rows:** Erweiterte `_includes/feature_row` mit:
+- `relative_url` Filter für korrekte Pfade
+- Responsive Bild-Handling
+- Accessibility-Verbesserungen
+
+## 📝 Inhalts-Management
+
+### Feature Rows erstellen
+
+Beispiel für `feature_row` in Front Matter:
+
+```yaml
+feature_row:
+  - image_path: "{{ site.baseurl }}/assets/images/service.jpg"
+    alt: "Service Beschreibung"
+    title: "Service Titel"
+    excerpt: "Kurze Beschreibung des Services"
+    url: "{{ site.baseurl }}/service-page/"
+    btn_label: "Mehr erfahren"
+    btn_class: "btn--primary"
+```
+
+### Neue Seiten hinzufügen
+
+1. Datei in `_pages/` erstellen
+2. Front Matter konfigurieren:
+   ```yaml
+   ---
+   permalink: /neue-seite/
+   title: "Seitentitel"
+   layout: single # oder splash
+   seo:
+     title: "SEO Titel"
+     description: "SEO Beschreibung"
+   ---
+   ```
+3. Inhalt in Markdown verfassen
+4. Links in Navigation (`_data/navigation.yml`) hinzufügen
+
+## 🧪 Testing & Qualitätssicherung
+
+### Pre-Deployment Checklist
+
+**Technisch:**
+- [ ] `bundle exec jekyll build` läuft fehlerfrei
+- [ ] Alle Asset-Links verwenden `site.baseurl` oder `relative_url`
+- [ ] SEO-Tags sind vollständig
+- [ ] Bilder haben Alt-Text
+
+**Inhaltlich:**
+- [ ] Alle Links funktionieren
+- [ ] Kontaktformular ist erreichbar
+- [ ] Mobile Responsiveness geprüft
+- [ ] Ladezeiten optimiert
+
+**Post-Deployment:**
+- [ ] GitHub Pages Build erfolgreich
+- [ ] Website unter `https://marcelehmann.github.io/KMUpower` erreichbar
+- [ ] Navigation funktioniert
+- [ ] 404-Seite funktioniert
+- [ ] SSL/HTTPS aktiviert
+
+## 🔄 Wartung & Updates
+
+### Regelmäßige Aufgaben
+
+**Monatlich:**
+- Dependencies aktualisieren: `bundle update`
+- Minimal Mistakes Theme Updates prüfen
+- Bilder optimieren und komprimieren
+
+**Bei Bedarf:**
+- Inhalte überarbeiten
+- SEO-Keywords analysieren
+- Performance-Metriken überprüfen
+
+### Theme Updates
+
+```bash
+# Remote Theme wird automatisch aktualisiert
+# Für manuelle Updates:
+bundle update minimal-mistakes-jekyll
+```
+
+## 🚨 Troubleshooting
+
+### Häufige Probleme
+
+**Problem:** Feature Rows rendern leer
+- **Lösung:** YAML-Definitionen in Front Matter hinzufügen
+
+**Problem:** Assets laden nicht (404)
+- **Lösung:** `site.baseurl` in Pfaden verwenden
+
+**Problem:** GitHub Actions Build fehlschlägt
+- **Lösung:** `Gemfile.lock` auf aktuellste Ruby-Version prüfen
+
+**Problem:** CSS-Änderungen werden nicht übernommen
+- **Lösung:** Browser-Cache leeren, Jekyll Server neu starten
+
+### Debugging
+
+```bash
+# Detaillierte Build-Ausgabe
+bundle exec jekyll build --verbose
+
+# Lokaler Server mit Drafts
+bundle exec jekyll serve --drafts --incremental
+
+# Dependency-Check
+bundle doctor
+```
+
+## 📞 Support & Kontakt
+
+**Technische Fragen:**
+- Repository Issues: https://github.com/thepoweraddicts/KMUpower/issues
+- Jekyll Dokumentation: https://jekyllrb.com/docs/
+- Minimal Mistakes Docs: https://mmistakes.github.io/minimal-mistakes/docs/
+
+**Business Kontakt:**
+- E-Mail: info@kmupower.ch
+- Website: https://kmupower.ch
+- LinkedIn: https://linkedin.com/company/kmupower
+
+---
+
+**Version:** 1.0  
+**Letzte Aktualisierung:** Juni 2025  
+**Maintainer:** KMUpower Team  
+**Lizenz:** MIT (Theme), Proprietary (Inhalte)
 
 :sparkles: See what's new in the [CHANGELOG](CHANGELOG.md).
 
