@@ -1,5 +1,7 @@
 source "https://rubygems.org"
 
+gem "minimal-mistakes-jekyll"
+
 # Use the Minimal Mistakes theme gem
 gemspec
 
