@@ -342,3 +342,14 @@ h1, h2, h3 {
     flex-direction: column;
   }
 }
+
+img[loading], img[loading="lazy"] {
+  /* fallback for browsers that support loading attribute */
+  background: #f8fffe;
+  min-height: 40px;
+  display: block;
+}
+
+.page__content img:not([loading]) {
+  loading: lazy;
+}
