@@ -1,27 +1,5 @@
-# Jekyll
-_site/
-.sass-cache/
-.jekyll-cache/
+_site
+.sass-cache
+.jekyll-cache
 .jekyll-metadata
-vendor/
-
-# Ruby
-.bundle/
-vendor/bundle
-Gemfile.lock
-
-# Logs
-*.log
-
-# Temporary files
-*.swp
-*.swo
-*~
-.DS_Store
-
-# IDE files
-.idea/
-.vscode/
-*.sublime-project
-*.sublime-workspace
-
+vendor

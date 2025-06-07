@@ -1,35 +1,35 @@
-# CheckYield GitHub-Page
+# KMUpower Website
 
-Dies ist die offizielle GitHub-Page für CheckYield, einen Anbieter von Microsoft Power Platform Entwicklung und Beratung.
-
-## Über das Projekt
-
-Diese Website wurde mit Jekyll erstellt und ist für die Bereitstellung auf GitHub Pages optimiert. Sie präsentiert die Dienstleistungen von CheckYield im Bereich Microsoft Power Platform und bietet Informationen über die KMU PowerSuite.
-
-## Funktionen
-
-- Responsive Design für alle Geräte
-- Optimiert für Suchmaschinen
-- Moderne und professionelle Gestaltung
-- Informationen zu Microsoft Power Platform Dienstleistungen
-- Detaillierte Preismodelle
-- Vorstellung der KMU PowerSuite
+Dies ist die offizielle Website von KMUpower, erstellt mit Jekyll und dem Minimal Mistakes Theme für GitHub Pages.
 
 ## Lokale Entwicklung
 
-Um die Website lokal zu entwickeln, folgen Sie diesen Schritten:
+1. Installiere die Abhängigkeiten:
+   ```powershell
+   bundle install
+   ```
+2. Starte die lokale Entwicklungsumgebung:
+   ```powershell
+   bundle exec jekyll serve
+   ```
+3. Öffne die Seite unter http://localhost:4000
 
-1. Stellen Sie sicher, dass Ruby und Bundler installiert sind
-2. Klonen Sie das Repository
-3. Führen Sie `bundle install` aus, um die Abhängigkeiten zu installieren
-4. Führen Sie `bundle exec jekyll serve` aus, um die Website lokal zu starten
-5. Öffnen Sie `http://localhost:4000` in Ihrem Browser
+## Deployment
 
-## Bereitstellung
+Die Seite ist für GitHub Pages konfiguriert und wird automatisch aus dem `main`-Branch veröffentlicht.
 
-Die Website wird automatisch auf GitHub Pages bereitgestellt, wenn Änderungen in den `main`-Branch gepusht werden.
+## Struktur
+- `_config.yml`: Konfiguration der Seite und des Themes
+- `index.md`: Startseite
+- `.github/copilot-instructions.md`: Copilot-Anweisungen
+- `_pages/blog.md`: Blog-Übersicht ("KMU Digitalisierung")
+- `_posts/`: Blogbeiträge
 
-## Lizenz
+## Blogstruktur und Beitragsformat
 
-Alle Rechte vorbehalten. © CheckYield 2025.
+- Blogbeiträge befinden sich im Verzeichnis `_posts/` und folgen dem Schema `YYYY-MM-DD-titel.md`.
+- Die Blog-Übersicht ist unter `_pages/blog.md` zu finden.
+- Jeder Beitrag sollte relevante Kategorien und ein Veröffentlichungsdatum im Frontmatter enthalten.
 
+## Theme
+[Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/)
