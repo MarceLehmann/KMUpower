@@ -1,0 +1,80 @@
+---
+layout: default
+---
+
+<section class="page-header">
+  <div class="container">
+    <h1>{{ page.title }}</h1>
+    <p>{{ page.subtitle }}</p>
+  </div>
+</section>
+
+<section class="service-content">
+  <div class="container">
+    <div class="service-main">
+      <div class="service-image">
+        <img src="{{ page.image | relative_url }}" alt="{{ page.title }}">
+      </div>
+      
+      <div class="service-description">
+        {{ content }}
+      </div>
+      
+      {% if page.features %}
+        <div class="service-features">
+          <h2>Leistungen</h2>
+          <ul>
+            {% for feature in page.features %}
+              <li>{{ feature }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      {% endif %}
+      
+      {% if page.process %}
+        <div class="service-process">
+          <h2>Unser Prozess</h2>
+          <div class="process-steps">
+            {% for step in page.process %}
+              <div class="process-step">
+                <div class="step-number">{{ forloop.index }}</div>
+                <div class="step-content">
+                  <h3>{{ step.title }}</h3>
+                  <p>{{ step.description }}</p>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      {% endif %}
+    </div>
+    
+    <div class="service-sidebar">
+      <div class="sidebar-cta">
+        <h3>Interesse geweckt?</h3>
+        <p>Kontaktieren Sie uns für ein unverbindliches Beratungsgespräch.</p>
+        <a href="/contact" class="btn">Kontakt aufnehmen</a>
+      </div>
+      
+      <div class="related-services">
+        <h3>Weitere Dienstleistungen</h3>
+        <ul>
+          {% for service in site.services %}
+            {% if service.url != page.url %}
+              <li><a href="{{ service.url | relative_url }}">{{ service.title }}</a></li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container">
+    <h2 class="animate">{{ page.cta_title }}</h2>
+    <p class="animate delay-1">{{ page.cta_subtitle }}</p>
+    <a href="{{ page.cta_button_url }}" class="btn btn-outline animate delay-2">{{ page.cta_button_text }}</a>
+  </div>
+</section>
+

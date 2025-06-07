@@ -1,16 +1,91 @@
 ---
-# Home layout
+layout: default
 ---
-<!DOCTYPE html>
-<html lang="de">
-<head>
-  <meta charset="UTF-8">
-  <title>{{ page.title }}</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body class="layout--home">
-  <main>
-    {{ content }}
-  </main>
-</body>
-</html>
+
+<div class="hero">
+  <div class="container">
+    <div class="hero-content animate">
+      <h2>{{ page.hero_title }}</h2>
+      <p>{{ page.hero_subtitle }}</p>
+      <div class="hero-buttons">
+        <a href="{{ page.hero_button_url }}" class="btn">{{ page.hero_button_text }}</a>
+        <a href="{{ page.hero_button2_url }}" class="btn btn-outline">{{ page.hero_button2_text }}</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section id="about" class="about">
+  <div class="container">
+    <div class="section-title">
+      <h2>{{ page.about_title }}</h2>
+      <p>{{ page.about_subtitle }}</p>
+    </div>
+    <div class="about-content">
+      <div class="about-text animate">
+        {{ page.about_content | markdownify }}
+      </div>
+      <div class="about-image animate delay-1">
+        <img src="{{ page.about_image | relative_url }}" alt="{{ page.about_image_alt }}">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="services">
+  <div class="container">
+    <div class="section-title">
+      <h2>{{ page.services_title }}</h2>
+      <p>{{ page.services_subtitle }}</p>
+    </div>
+    <div class="services-grid">
+      {% for service in site.services limit:3 %}
+        <div class="service-card animate">
+          <img src="{{ service.icon | relative_url }}" alt="{{ service.title }}">
+          <h3>{{ service.title }}</h3>
+          <p>{{ service.excerpt }}</p>
+          <a href="{{ service.url | relative_url }}" class="btn">Mehr erfahren</a>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section id="cta" class="cta">
+  <div class="container">
+    <h2 class="animate">{{ page.cta_title }}</h2>
+    <p class="animate delay-1">{{ page.cta_subtitle }}</p>
+    <a href="{{ page.cta_button_url }}" class="btn btn-outline animate delay-2">{{ page.cta_button_text }}</a>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="container">
+    <div class="section-title">
+      <h2>{{ page.contact_title }}</h2>
+      <p>{{ page.contact_subtitle }}</p>
+    </div>
+    <div class="contact-form">
+      <form>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">E-Mail</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="subject">Betreff</label>
+          <input type="text" id="subject" name="subject">
+        </div>
+        <div class="form-group">
+          <label for="message">Nachricht</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <button type="submit" class="btn">Nachricht senden</button>
+      </form>
+    </div>
+  </div>
+</section>
+
